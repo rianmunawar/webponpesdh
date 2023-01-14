@@ -1,8 +1,15 @@
 import React from 'react';
+import Footer from '../components/organisms/Footer';
 import Header from '../components/organisms/Header/Header';
 
-const index = () => {
-  return <Header />;
+const Layouts = (props) => {
+  return (
+    <>
+      <Header />
+      {props.children}
+      <Footer />
+    </>
+  );
 };
 
-export default index;
+export default Layouts;

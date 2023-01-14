@@ -1,4 +1,10 @@
 import React from 'react';
+import IconYellowList from '../../atoms/IconYellowList';
+import shapeGreen from '../../../assets/img/why/why-shape-green.png';
+import shapePink from '../../../assets/img/why/why-shape-pink.png';
+import shapeDot from '../../../assets/img/why/why-shape-dot.png';
+import shapeLine from '../../../assets/img/why/why-shape-line.png';
+import img from '../../../assets/img/why/why.png';
 
 const Greating = () => {
   return (
@@ -15,7 +21,7 @@ const Greating = () => {
                   K.H. Drs.
                   <span className="yellow-bg yellow-bg-big">
                     Nana Suryana
-                    <img src="assets/img/shape/yellow-bg.png" alt />
+                    <IconYellowList />
                   </span>
                   MA
                 </h2>
@@ -47,27 +53,11 @@ const Greating = () => {
           </div>
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
             <div className="why__thumb">
-              <img src="assets/img/why/why.png" alt />
-              <img
-                className="why-green"
-                src="assets/img/why/why-shape-green.png"
-                alt
-              />
-              <img
-                className="why-pink"
-                src="assets/img/why/why-shape-pink.png"
-                alt
-              />
-              <img
-                className="why-dot"
-                src="assets/img/why/why-shape-dot.png"
-                alt
-              />
-              <img
-                className="why-line"
-                src="assets/img/why/why-shape-line.png"
-                alt
-              />
+              <img src={img} alt />
+              <img className="why-green" src={shapeGreen} alt />
+              <img className="why-pink" src={shapePink} alt />
+              <img className="why-dot" src={shapeDot} alt />
+              <img className="why-line" src={shapeLine} alt />
             </div>
           </div>
         </div>

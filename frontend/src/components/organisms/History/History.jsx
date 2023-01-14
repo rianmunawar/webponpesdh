@@ -1,4 +1,7 @@
 import React from 'react';
+import IconYellowList from '../../atoms/IconYellowList';
+import shapeGreen from '../../../assets/img/why/why-shape-green.png';
+import shapePink from '../../../assets/img/why/why-shape-pink.png';
 
 const History = () => {
   return (
@@ -7,20 +10,9 @@ const History = () => {
         <div className="row align-items-center">
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
             <div className="why__thumb">
-              <iframe
-                src="https://www.youtube.com/embed/hM5tPRBp8YE?autoplay=1"
-                frameBorder={0}
-              />
-              <img
-                className="why-green"
-                src="assets/img/why/why-shape-green.png"
-                alt
-              />
-              <img
-                className="why-pink"
-                src="assets/img/why/why-shape-pink.png"
-                alt
-              />
+              <iframe src="https://www.youtube.com/embed/hM5tPRBp8YE?autoplay=1" />
+              <img className="why-green" src={shapeGreen} alt="" />
+              <img className="why-pink" src={shapePink} alt />
             </div>
           </div>
           <div className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">
@@ -31,7 +23,7 @@ const History = () => {
                   YPI
                   <span className="yellow-bg yellow-bg-big">
                     Darul Hikmah
-                    <img src="assets/img/shape/yellow-bg.png" alt />
+                    <IconYellowList />
                   </span>
                 </h2>
                 <p>

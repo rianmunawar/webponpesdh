@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import IconYellowList from '../../atoms/IconYellowList';
+import './gallery.css';
 
 const Gallery = () => {
   const [show, setShow] = useState(false);
@@ -13,13 +15,6 @@ const Gallery = () => {
   };
   return (
     <section className="events__area pt-115 pb-120 p-relative">
-      <div className="events__shape">
-        <img
-          className="events-1-shape"
-          src="assets/img/events/events-shape.png"
-          alt
-        />
-      </div>
       <div className="container">
         <div className="row">
           <div className="col-xxl-4 offset-xxl-4">
@@ -27,7 +22,7 @@ const Gallery = () => {
               <h2 className="section__title">
                 <span className="yellow-bg yellow-bg-big">
                   Galeri
-                  <img src="assets/img/shape/yellow-bg.png" alt />
+                  <IconYellowList />
                 </span>
               </h2>
               <p>Documentasi kegiatan ponpes Darul Hikmah</p>
@@ -38,7 +33,6 @@ const Gallery = () => {
           <Modal
             show={show}
             onHide={handleClose}
-            fullscreen="sm-down"
             size="lg"
             className="modal bg-black-50"
             centered
