@@ -1,7 +1,32 @@
-:root{
-    --bg-blue : #2b4eff
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-blue: #2b4eff;
 }
 
-.main-menu .navlink {
-    color: var(--bg-blue);
+body {
+  font-family: 'Hind', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #6d6e75;
+  line-height: 26px;
+}
+
+.navbar {
+  height: 100px;
+}
+
+.navbar .navlink {
+  color: black !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.navbar .navlink:hover {
+  color: var(--bg-blue) !important;
+}
+
+.navDropdown {
+  color: #000 !important;
+  font-weight: 500 !important;
 }

@@ -6,7 +6,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import CtaBtn from '../../atoms/CtaBtn/CtaBtn';
 import './header.css';
 
-function BHeader() {
+function Header() {
   return (
     <>
       {['md'].map((expand) => (
@@ -14,9 +14,10 @@ function BHeader() {
           key={expand}
           bg="light"
           expand={expand}
-          className="mb-3 py-10 navbar bg-white"
+          fixed="top"
+          className="mb-4 py-10 navbar bg-white shadow-sm"
         >
-          <Container fluid>
+          <Container>
             <Navbar.Brand href="#">MAKDH</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -34,24 +35,30 @@ function BHeader() {
                   <Nav.Link href="#action1" className="navlink">
                     Beranda
                   </Nav.Link>
-                  <Nav.Link href="#action2">Profil</Nav.Link>
+                  <Nav.Link href="#action2" className="navlink">
+                    Profil
+                  </Nav.Link>
                   <NavDropdown
                     title="Lembaga"
+                    className="navlink text-dark"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">
+                    <NavDropdown.Item href="#action3" className="navlink">
                       RA AR-Rohmah
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item href="#action4" className="navlink">
                       MTs Darul Hikmah
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="#action5" className="navlink">
                       MAK Darul Hikmah
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#berita">Berita</Nav.Link>
-                  <Nav.Link href="#kontak">Kontak</Nav.Link>
+                  <Nav.Link href="#berita" className="navlink">
+                    Berita
+                  </Nav.Link>
+                  <Nav.Link href="#kontak" className="navlink">
+                    Kontak
+                  </Nav.Link>
                   <CtaBtn
                     className="header__btn ml-20 d-none d-sm-block"
                     classChild="e-btn"
@@ -68,4 +75,4 @@ function BHeader() {
   );
 }
 
-export default BHeader;
+export default Header;
