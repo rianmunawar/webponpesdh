@@ -1,0 +1,7 @@
+:root{
+    --bg-blue : #2b4eff
+}
+
+.main-menu .navlink {
+    color: var(--bg-blue);
+}
