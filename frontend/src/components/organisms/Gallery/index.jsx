@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Modal } from 'react-bootstrap';
-import IconYellowList from '../../atoms/IconYellowList';
-import './gallery.css';
+import React, { useState } from "react";
+import { Modal } from "react-bootstrap";
+import IconYellowList from "../../atoms/IconYellowList";
+import "./gallery.css";
 
 const Gallery = () => {
   const [show, setShow] = useState(false);
-  const [src, setSrc] = useState('');
+  const [src, setSrc] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = (e) => {
@@ -62,6 +62,16 @@ const Gallery = () => {
             className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100"
           />
         </div>
+        {/* <div className="row">
+          <iframe
+            src="https://snapwidget.com/embed/1021954"
+            className="snapwidget-widget"
+            allowTransparency="true"
+            frameBorder={0}
+            scrolling="yes"
+            style={{ border: "none", overflow: "hidden", width: "100%" }}
+          />
+        </div> */}
       </div>
     </section>
   );
