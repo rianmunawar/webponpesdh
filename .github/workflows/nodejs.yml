@@ -36,3 +36,4 @@ jobs:
             **/.git*/**
             **/node_modules/**
           dangerous-clean-slate: true
+          local-dir: ./frontend/build/
