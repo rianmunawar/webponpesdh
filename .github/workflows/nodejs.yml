@@ -20,8 +20,10 @@ jobs:
       - name: 🔨 Build Project
         run: |
           cd frontend
-          npm ci
+          npm i
           npm run build --if-present
+        env:
+          CI: false
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
