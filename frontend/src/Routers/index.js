@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import BeritaPage from "../pages/BeritaPage";
-import HomePage from "../pages/HomePage/index.jsx";
+import HomePage from "../pages/HomePage";
 import KontakPage from "../pages/KontakPage";
 import ProfilPage from "../pages/ProfilPage";
 
