@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Beranda from "../pages/Beranda";
 import BeritaPage from "../pages/BeritaPage";
-// import HomePage from "../pages/HomePage";
 import KontakPage from "../pages/KontakPage";
 import ProfilPage from "../pages/ProfilPage";
 
 function Routers() {
   return (
     <Routes>
-//       <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<Beranda />} />
       <Route path="/profil" element={<ProfilPage />} />
       <Route path="/blog" element={<BeritaPage />} />
       <Route path="/kontak" element={<KontakPage />} />
