@@ -1,10 +1,10 @@
-import React from 'react';
-import logo from '../../../assets/img/logo/logo-2.png';
+import React from "react";
+import logo from "../../../assets/img/logo/logo-2.png";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="footer__area footer-bg">
+      <div className="footer__area footer-bg mt-100">
         <div className="footer__top pt-190 pb-40">
           <div className="container">
             <div className="row">

@@ -1,10 +1,10 @@
-import React from 'react';
-import IconYellowList from '../../atoms/IconYellowList';
-import shapeGreen from '../../../assets/img/why/why-shape-green.png';
-import shapePink from '../../../assets/img/why/why-shape-pink.png';
-import shapeDot from '../../../assets/img/why/why-shape-dot.png';
-import shapeLine from '../../../assets/img/why/why-shape-line.png';
-import img from '../../../assets/img/why/why.png';
+import React from "react";
+import IconYellowList from "../../atoms/IconYellowList";
+import shapeGreen from "../../../assets/img/why/why-shape-green.png";
+import shapePink from "../../../assets/img/why/why-shape-pink.png";
+import shapeDot from "../../../assets/img/why/why-shape-dot.png";
+import shapeLine from "../../../assets/img/why/why-shape-line.png";
+import img from "../../../assets/img/why/why.png";
 
 const Greating = () => {
   return (
@@ -20,7 +20,7 @@ const Greating = () => {
                 <h2 className="section__title">
                   K.H. Drs.
                   <span className="yellow-bg yellow-bg-big">
-                    Nana Suryana
+                    Nana Suryana,
                     <IconYellowList />
                   </span>
                   MA

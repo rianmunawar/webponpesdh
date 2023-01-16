@@ -1,12 +1,13 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Header from './components/organisms/Header/Header';
-import HomePage from './pages/HomePage';
-
-import Routers from './Routers';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Routers from "./Routers";
 
 function App() {
-  return <Routers />;
+  return (
+    <BrowserRouter>
+      <Routers />
+    </BrowserRouter>
+  );
 }
 
 export default App;
