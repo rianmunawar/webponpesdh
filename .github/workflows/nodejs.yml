@@ -36,4 +36,4 @@ jobs:
             **/.git*/**
             **/node_modules/**
           dangerous-clean-slate: true
-          local-dir: ./build/
+          local-dir: build/
