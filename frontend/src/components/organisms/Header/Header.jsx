@@ -3,11 +3,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import CtaBtn from "../../atoms/CtaBtn/CtaBtn";
 import "./header.css";
 
 function Header() {
+  const activeLink = "active";
+  const normal = "";
   return (
     <>
       {["md"].map((expand) => (
@@ -40,11 +42,25 @@ function Header() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3" as={"ul"}>
-                  <Nav.Link href="#action1" className="navlink" as={"li"}>
-                    <Link to={"/"}>Beranda</Link>
+                  <Nav.Link className="navlink" as={"li"}>
+                    <NavLink
+                      to={"/"}
+                      className={({ isActive }) =>
+                        isActive ? activeLink : normal
+                      }
+                    >
+                      Beranda
+                    </NavLink>
                   </Nav.Link>
                   <Nav.Link className="navlink" as={"li"}>
-                    <Link to={"/profil"}>Profil</Link>
+                    <NavLink
+                      to={"/profil"}
+                      className={({ isActive }) =>
+                        isActive ? activeLink : normal
+                      }
+                    >
+                      Profil
+                    </NavLink>
                   </Nav.Link>
                   <NavDropdown
                     as={"li"}
@@ -63,10 +79,24 @@ function Header() {
                     </NavDropdown.Item>
                   </NavDropdown>
                   <Nav.Link className="navlink" as={"li"}>
-                    <Link to={"/blog"}>Berita</Link>
+                    <NavLink
+                      to={"/blog"}
+                      className={({ isActive }) =>
+                        isActive ? activeLink : normal
+                      }
+                    >
+                      Berita
+                    </NavLink>
                   </Nav.Link>
                   <Nav.Link className="navlink" as={"li"}>
-                    <Link to={"/kontak"}>Kontak</Link>
+                    <NavLink
+                      to={"/kontak"}
+                      className={({ isActive }) =>
+                        isActive ? activeLink : normal
+                      }
+                    >
+                      Kontak
+                    </NavLink>
                   </Nav.Link>
                   <CtaBtn
                     className="header__btn ml-20 d-none d-sm-block"

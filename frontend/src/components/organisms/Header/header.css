@@ -22,6 +22,14 @@ body {
   font-weight: 600;
 }
 
+.navbar .navlink .active {
+  color: var(--bg-blue) !important;
+}
+
+.navbar-nav .active {
+  color: var(--bg-blue) !important;
+}
+
 .navbar .navlink:hover {
   color: var(--bg-blue) !important;
 }
