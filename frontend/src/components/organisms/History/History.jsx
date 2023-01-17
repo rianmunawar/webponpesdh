@@ -1,7 +1,7 @@
-import React from 'react';
-import IconYellowList from '../../atoms/IconYellowList';
-import shapeGreen from '../../../assets/img/why/why-shape-green.png';
-import shapePink from '../../../assets/img/why/why-shape-pink.png';
+import React from "react";
+import IconYellowList from "../../atoms/IconYellowList";
+import shapeGreen from "../../../assets/img/why/why-shape-green.png";
+import shapePink from "../../../assets/img/why/why-shape-pink.png";
 
 const History = () => {
   return (
@@ -10,7 +10,7 @@ const History = () => {
         <div className="row align-items-center">
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
             <div className="why__thumb">
-              <iframe src="https://www.youtube.com/embed/hM5tPRBp8YE?autoplay=1" />
+              <iframe src="https://www.youtube-nocookie.com/embed/hM5tPRBp8YE" />
               <img className="why-green" src={shapeGreen} alt="" />
               <img className="why-pink" src={shapePink} alt />
             </div>

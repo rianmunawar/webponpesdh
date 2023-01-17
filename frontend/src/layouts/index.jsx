@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import ToTopBtn from "../components/atoms/ToTopBtn";
 import Loading from "../components/molecules/Loading";
 import Footer from "../components/organisms/Footer";
 import Header from "../components/organisms/Header/Header";
@@ -19,6 +20,7 @@ const Layouts = (props) => {
         <Loading />
       ) : (
         <>
+          <ToTopBtn />
           <Header />
           {props.children}
           <Footer />
