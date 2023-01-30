@@ -1,6 +1,6 @@
 import React from "react";
 import BannerPage from "../../components/molecules/BannerPage";
-import Layouts from "../../Layouts";
+import Layouts from "../../Layout";
 
 const Ppdb = () => {
   return (

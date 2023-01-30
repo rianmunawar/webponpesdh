@@ -4,7 +4,7 @@ import Gallery from "../../components/organisms/Gallery";
 import Greating from "../../components/organisms/Greating/Greating";
 import Program from "../../components/organisms/Program/Program";
 import Slider from "../../components/organisms/Slider";
-import Layouts from "../../Layouts";
+import Layouts from "../../Layout";
 
 function Mak() {
   return (

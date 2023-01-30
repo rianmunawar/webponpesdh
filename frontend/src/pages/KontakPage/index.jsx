@@ -3,7 +3,7 @@ import IconYellowList from "../../components/atoms/IconYellowList";
 import BannerPage from "../../components/molecules/BannerPage";
 import KontakForm from "../../components/organisms/KontakForm";
 import KontakInfo from "../../components/organisms/KontakInfo";
-import Layouts from "../../Layouts";
+import Layouts from "../../Layout";
 import kontakShape1 from "../../assets/img/contact/contact-shape-1.png";
 import kontakShape2 from "../../assets/img/contact/contact-shape-2.png";
 import kontakShape3 from "../../assets/img/contact/contact-shape-3.png";

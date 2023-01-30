@@ -3,7 +3,7 @@ import BannerPage from "../../components/molecules/BannerPage";
 import Greating from "../../components/organisms/Greating/Greating";
 import History from "../../components/organisms/History/History";
 import VisiMisi from "../../components/organisms/VisiMisi";
-import Layouts from "../../Layouts";
+import Layouts from "../../Layout";
 
 const ProfilPage = () => {
   return (

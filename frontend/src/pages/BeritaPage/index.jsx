@@ -1,7 +1,7 @@
 import React from "react";
 import BannerPage from "../../components/molecules/BannerPage";
 import Card from "../../components/molecules/Card";
-import Layouts from "../../Layouts";
+import Layouts from "../../Layout";
 import image1 from "../../assets/img/blog/blog-1.jpg";
 import authorPic from "../../assets/img/blog/blog-1.jpg";
 
