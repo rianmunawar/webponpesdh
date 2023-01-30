@@ -3,7 +3,7 @@ import ToTopBtn from "../components/atoms/ToTopBtn";
 import Footer from "../components/organisms/Footer";
 import Header from "../components/organisms/Header/Header";
 
-const Layouts = (props) => {
+const Layout = (props) => {
   return (
     <>
       <ToTopBtn />
@@ -14,4 +14,4 @@ const Layouts = (props) => {
   );
 };
 
-export default Layouts;
+export default Layout;
