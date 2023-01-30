@@ -1,10 +1,10 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import React from "react";
+import { Carousel } from "react-bootstrap";
 
 const Slider = () => {
   return (
     <section className="carousel__area mt-80" id="carouselBanner">
-      <Carousel className="carousel-inner">
+      <Carousel className="carousel-inner overflow-hidden">
         <Carousel.Item interval={3000} className="carousel-item">
           <img
             className="d-block w-100"

@@ -1,8 +1,8 @@
-import React from 'react';
-import IconYellowList from '../../atoms/IconYellowList';
-import Card from '../../molecules/Card';
-import image1 from '../../../assets/img/blog/blog-1.jpg';
-import authorPic from '../../../assets/img/blog/blog-1.jpg';
+import React from "react";
+import IconYellowList from "../../atoms/IconYellowList";
+import Card from "../../molecules/Card";
+import image1 from "../../../assets/img/blog/blog-1.jpg";
+import authorPic from "../../../assets/img/blog/blog-1.jpg";
 
 const Berita = () => {
   return (
@@ -41,36 +41,42 @@ const Berita = () => {
           </div>
         </div>
         <div className="row grid">
-          <Card
-            title="Maulid Nabi Muhammad SAW"
-            linkTarget="/detail"
-            tag="islami"
-            imgAlt="gambar"
-            imgUrl={image1}
-            authorPic={authorPic}
-            author="admin"
-            updatedAt="Juni, 12 2022"
-          />
-          <Card
-            title="Maulid Nabi Muhammad SAW"
-            linkTarget="/detail"
-            tag="islami"
-            imgAlt="gambar"
-            imgUrl={image1}
-            authorPic={authorPic}
-            author="admin"
-            updatedAt="Juni, 12 2022"
-          />
-          <Card
-            title="Maulid Nabi Muhammad SAW"
-            linkTarget="/detail"
-            tag="islami"
-            imgAlt="gambar"
-            imgUrl={image1}
-            authorPic={authorPic}
-            author="admin"
-            updatedAt="Juni, 12 2022"
-          />
+          <div className="col-12 col-md-4">
+            <Card
+              title="Maulid Nabi Muhammad SAW"
+              linkTarget="/detail"
+              tag="islami"
+              imgAlt="gambar"
+              imgUrl={image1}
+              authorPic={authorPic}
+              author="admin"
+              updatedAt="Juni, 12 2022"
+            />
+          </div>
+          <div className="col-12 col-md-4">
+            <Card
+              title="Maulid Nabi Muhammad SAW"
+              linkTarget="/detail"
+              tag="islami"
+              imgAlt="gambar"
+              imgUrl={image1}
+              authorPic={authorPic}
+              author="admin"
+              updatedAt="Juni, 12 2022"
+            />
+          </div>
+          <div className="col-12 col-md-4">
+            <Card
+              title="Maulid Nabi Muhammad SAW"
+              linkTarget="/detail"
+              tag="islami"
+              imgAlt="gambar"
+              imgUrl={image1}
+              authorPic={authorPic}
+              author="admin"
+              updatedAt="Juni, 12 2022"
+            />
+          </div>
         </div>
       </div>
     </section>

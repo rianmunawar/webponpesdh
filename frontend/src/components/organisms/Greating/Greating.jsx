@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import IconYellowList from "../../atoms/IconYellowList";
 import shapeGreen from "../../../assets/img/why/why-shape-green.png";
 import shapePink from "../../../assets/img/why/why-shape-pink.png";
@@ -6,7 +7,7 @@ import shapeDot from "../../../assets/img/why/why-shape-dot.png";
 import shapeLine from "../../../assets/img/why/why-shape-line.png";
 import img from "../../../assets/img/why/why.png";
 
-const Greating = () => {
+const Greating = (props) => {
   return (
     <section className="why__area pt-100">
       <div className="container">
@@ -43,11 +44,11 @@ const Greating = () => {
                 </p>
               </div>
               <div className="why__btn">
-                <a href="about.html" className="link-btn">
+                <Link to="/detail-berita/2" className="link-btn">
                   Selanjutnya
                   <i className="far fa-arrow-right" />
                   <i className="far fa-arrow-right" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
