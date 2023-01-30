@@ -1,5 +1,5 @@
-import React from 'react';
-import shapeCta from '../../../assets/img/cta/cta-shape.png';
+import React from "react";
+import shapeCta from "../../../assets/img/cta/cta-shape.png";
 
 const CtaBanner = () => {
   return (
@@ -13,13 +13,13 @@ const CtaBanner = () => {
             <div className="col-xxl-7 col-xl-7 col-lg-8 col-md-8">
               <div className="cta__content">
                 <h3 className="cta__title">
-                  Lihat detail informasi PSB Ponpes Darul Hikmah
+                  Lihat detail informasi PPDB Ponpes Darul Hikmah
                 </h3>
               </div>
             </div>
             <div className="col-xxl-5 col-xl-5 col-lg-4 col-md-4">
               <div className="cta__more d-md-flex justify-content-end p-relative z-index-1">
-                <a href="contact.html" className="e-btn e-btn-white">
+                <a href="/ppdb" className="e-btn e-btn-white">
                   Informasi
                 </a>
               </div>

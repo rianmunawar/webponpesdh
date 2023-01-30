@@ -130,8 +130,8 @@ function Header() {
                     <CtaBtn
                       className="header__btn ml-20 d-none d-sm-block"
                       classChild="e-btn"
-                      label="Info PSB"
-                      link="/psb"
+                      label="Info PPDB"
+                      link="/ppdb"
                     />
                   </Nav>
                 ) : (
