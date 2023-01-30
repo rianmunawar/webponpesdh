@@ -6,7 +6,7 @@ const BannerPage = (props) => {
   return (
     <div className="container-fluid mt-100 grey-bg" style={{ height: "220px" }}>
       <div className="container top-50 position-relative translate-middle-y">
-        <h2 className="page__title black-color ">Halaman {props.title}</h2>
+        <h2 className="page__title black-color ">{props.title}</h2>
         <nav aria-label="breadcrumb">
           <ul className="breadcrumb">
             <li className="breadcrumb-item">

@@ -1,4 +1,5 @@
 import React from "react";
+import SocialIcon from "../../atoms/SocialIcon";
 
 const KontakInfo = () => {
   return (
@@ -68,7 +69,7 @@ const KontakInfo = () => {
             <div className="contact__info-text">
               <h4>WhatsApp</h4>
               <p>
-                <a href="https://wa.me/6282120108769">0821-2010-8769</a>
+                <a href="https://wa.me/6287778963321">0877-7896-3321</a>
               </p>
             </div>
           </div>
@@ -78,19 +79,27 @@ const KontakInfo = () => {
         <h4>Follow Us</h4>
         <ul>
           <li>
-            <a href="#">
-              <i className="social_facebook" />
-            </a>
+            <SocialIcon
+              url="https://www.youtube.com/@pojokdh1993"
+              target="_blank"
+              classImg="social_facebook"
+            />
           </li>
           <li>
-            <a href="#" className="yt">
-              <i className="social_youtube" />
-            </a>
+            <SocialIcon
+              url="https://www.youtube.com/@pojokdh1993"
+              target="_blank"
+              className="yt"
+              classImg="social_youtube"
+            />
           </li>
           <li>
-            <a href="#" className="ig">
-              <i className="social_instagram" />
-            </a>
+            <SocialIcon
+              url="https://www.instagram.com/official_makdarulhikmah93"
+              target="_blank"
+              className="ig"
+              classImg="social_instagram"
+            />
           </li>
         </ul>
       </div>

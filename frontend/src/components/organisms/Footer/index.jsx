@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../../assets/img/logo/logo-2.png";
+import SocialIcon from "../../atoms/SocialIcon";
 
 const Footer = () => {
   return (
@@ -25,19 +26,28 @@ const Footer = () => {
                     <div className="footer__social">
                       <ul>
                         <li>
-                          <a href="#">
-                            <i className="social_facebook" />
-                          </a>
+                          <SocialIcon
+                            url="https://www.youtube.com/@pojokdh1993"
+                            target="_blank"
+                            className="fb"
+                            classImg="social_facebook"
+                          />
                         </li>
                         <li>
-                          <a href="#" className="yt">
-                            <i className="social_youtube" />
-                          </a>
+                          <SocialIcon
+                            url="https://www.youtube.com/@pojokdh1993"
+                            target="_blank"
+                            className="yt"
+                            classImg="social_youtube"
+                          />
                         </li>
                         <li>
-                          <a href="#" className="ig">
-                            <i className="social_instagram" />
-                          </a>
+                          <SocialIcon
+                            url="https://www.instagram.com/official_makdarulhikmah93"
+                            target="_blank"
+                            className="ig"
+                            classImg="social_instagram"
+                          />
                         </li>
                       </ul>
                     </div>
@@ -127,8 +137,13 @@ const Footer = () => {
                 <div className="footer__copyright text-center">
                   <p>
                     © 2022 Ponpes Darul Hikmah | All Rights Reserved | Develope
-                    By
-                    <a href="index.html">Rian Munawar</a>
+                    By &nbsp;
+                    <a
+                      href="https://www.instagram.com/rianmunawar13/"
+                      target={"_blank"}
+                    >
+                      Rian Munawar
+                    </a>
                   </p>
                 </div>
               </div>

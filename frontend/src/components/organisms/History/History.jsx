@@ -5,7 +5,7 @@ import shapePink from "../../../assets/img/why/why-shape-pink.png";
 
 const History = () => {
   return (
-    <section className="why__area pt-100">
+    <section className="why__area pt-100 mb-100">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
