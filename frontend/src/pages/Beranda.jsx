@@ -6,11 +6,10 @@ import Greating from "../components/organisms/Greating/Greating";
 import History from "../components/organisms/History/History";
 import Program from "../components/organisms/Program/Program";
 import Slider from "../components/organisms/Slider";
-import Layouts from "../Layouts";
 
 const Beranda = () => {
   return (
-    <Layouts>
+    <>
       <Slider />
       <Program />
       <Greating />
@@ -18,7 +17,7 @@ const Beranda = () => {
       <Berita />
       <Gallery />
       <CtaBanner />
-    </Layouts>
+    </>
   );
 };
 
