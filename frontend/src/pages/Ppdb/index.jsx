@@ -1,12 +1,12 @@
 import React from "react";
-import BannerPage from "../../components/molecules/BannerPage";
+import HeroPpdb from "../../components/organisms/HeroPpdb";
 import Layouts from "../../Layout";
 
 const Ppdb = () => {
   return (
     <>
       <Layouts>
-        <BannerPage title="PPDB" />
+        <HeroPpdb />
       </Layouts>
     </>
   );

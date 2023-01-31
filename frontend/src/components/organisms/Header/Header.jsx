@@ -26,13 +26,13 @@ function Header() {
         >
           <Container>
             <Navbar.Brand as={"div"}>
-              {urlPath[1] !== "mak" ? (
+              {urlPath[1] !== "ppdb" ? (
                 <Link to={"/"}>
                   <h1>PPDH</h1>
                 </Link>
               ) : (
-                <Link to={"/mak"}>
-                  <h1> MAKDHI</h1>
+                <Link to={"/ppdb"}>
+                  <h1>PPDH</h1>
                 </Link>
               )}
             </Navbar.Brand>
@@ -44,19 +44,19 @@ function Header() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  {urlPath[1] !== "mak" ? (
+                  {urlPath[1] !== "ppdb" ? (
                     <Link to={"/"}>
-                      <h1> PPDH</h1>
+                      <h1>PPDH</h1>
                     </Link>
                   ) : (
-                    <Link to={"/mak"}>
-                      <h1> MAKDHI</h1>
+                    <Link to={"/ppdb"}>
+                      <h1>PPDH</h1>
                     </Link>
                   )}
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                {urlPath[1] !== "mak" ? (
+                {urlPath[1] !== "ppdb" ? (
                   <Nav
                     className="justify-content-end flex-grow-1 pe-3"
                     as={"ul"}
@@ -141,63 +141,37 @@ function Header() {
                   >
                     <Nav.Link className="navlink" as={"li"}>
                       <NavLink
-                        to={"/mak"}
+                        to={"/ppdb#profil"}
                         className={({ isActive }) =>
                           isActive ? activeLink : normal
                         }
                       >
-                        Beranda
+                        Tentang Kami
                       </NavLink>
                     </Nav.Link>
                     <Nav.Link className="navlink" as={"li"}>
                       <NavLink
-                        to={"/makprofil"}
+                        to={"/ppdb#informasi"}
                         className={({ isActive }) =>
                           isActive ? activeLink : normal
                         }
                       >
-                        Profil
+                        Informasi PPDB
                       </NavLink>
                     </Nav.Link>
                     <Nav.Link className="navlink" as={"li"}>
                       <NavLink
-                        to={"/makekskul"}
+                        to={"/ppdb#fasilitas"}
                         className={({ isActive }) =>
                           isActive ? activeLink : normal
                         }
                       >
-                        Ekstrakurikuler
-                      </NavLink>
-                    </Nav.Link>
-                    <NavDropdown
-                      as={"li"}
-                      title="Site Link"
-                      className="fw-bold"
-                      id={`offcanvasNavbarDropdown-expand-${expand}`}
-                    >
-                      <NavDropdown.Item className="navlink">
-                        <Link to={"/"}>Ponpes Darul Hikmah</Link>
-                      </NavDropdown.Item>
-                      <NavDropdown.Item className="navlink">
-                        <Link to={"/ra"}>RA Ar-Rohmah</Link>
-                      </NavDropdown.Item>
-                      <NavDropdown.Item className="navlink">
-                        <Link to={"/mts"}>MTs Darul Hikmah</Link>
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                    <Nav.Link className="navlink" as={"li"}>
-                      <NavLink
-                        to={"/blog"}
-                        className={({ isActive }) =>
-                          isActive ? activeLink : normal
-                        }
-                      >
-                        Berita
+                        Fasilitas
                       </NavLink>
                     </Nav.Link>
                     <Nav.Link className="navlink" as={"li"}>
                       <NavLink
-                        to={"/kontak"}
+                        to={"/ppdb#kontak"}
                         className={({ isActive }) =>
                           isActive ? activeLink : normal
                         }
@@ -208,8 +182,8 @@ function Header() {
                     <CtaBtn
                       className="header__btn ml-20 d-none d-sm-block"
                       classChild="e-btn"
-                      label="Info PPDB"
-                      link="/ppdb"
+                      label="Daftar Sekarang"
+                      link="/ppdb/formulir-pendaftaran"
                     />
                   </Nav>
                 )}

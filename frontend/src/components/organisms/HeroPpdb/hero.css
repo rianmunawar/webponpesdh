@@ -1,0 +1,14 @@
+/* .banner-ppd__area {
+  height: 100vh;
+} */
+
+.container .hero-wrapper {
+  margin-top: 80px;
+}
+
+.hero-thumb {
+  background-image: url("../../../assets/img/hero/hero-shape-purple.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Berita from "../components/organisms/Berita";
 import CtaBanner from "../components/organisms/CtaBanner";
+import Fasilitas from "../components/organisms/Fasilitas";
 import Gallery from "../components/organisms/Gallery";
 import Greating from "../components/organisms/Greating/Greating";
 import History from "../components/organisms/History/History";
@@ -18,6 +19,7 @@ const Beranda = () => {
         <History />
         <Berita />
         <Gallery />
+        <Fasilitas />
         <CtaBanner />
       </Layouts>
     </>

@@ -47,19 +47,25 @@ const Gallery = () => {
             src="https://unsplash.it/1200/768.jpg?image=251"
             alt="gambar"
             onClick={handleShow}
-            className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100"
+            className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100 mb-2"
           />
           <img
             src="https://unsplash.it/1200/768.jpg?image=253"
             alt="gambar"
             onClick={handleShow}
-            className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100"
+            className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100 mb-2"
           />
           <img
             src="https://unsplash.it/1200/768.jpg?image=254"
             alt="gambar"
             onClick={handleShow}
-            className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100"
+            className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100 mb-2"
+          />
+          <img
+            src="https://unsplash.it/1200/768.jpg?image=259"
+            alt="gambar"
+            onClick={handleShow}
+            className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100 mb-2"
           />
         </div>
         {/* <div className="row">
