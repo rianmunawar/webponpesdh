@@ -1,14 +1,13 @@
 import React from "react";
 import CtaBtn from "../../atoms/CtaBtn/CtaBtn";
 import heroImg from "../../../assets/img/hero/hero-1.jpg";
-import shapePurple from "../../../assets/img/hero/hero-shape-purple.png";
 import "./hero.css";
 
 export default function HeroPpdb() {
   return (
     <>
       <section
-        className="banner-ppd__area pt-4 pb-5 blue-bg-3"
+        className="banner-ppd__area pt-4 pb-5 blue-bg-3 mb-100"
         style={{ marginTop: 80 }}
       >
         <div className="container">

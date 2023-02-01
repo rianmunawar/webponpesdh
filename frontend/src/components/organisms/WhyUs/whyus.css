@@ -1,0 +1,49 @@
+.swiper__area {
+  background-color: #b8dde3;
+  background-image: url("../../../assets/img/clouds15.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mySwiper {
+  height: 645px;
+}
+.swiper-pagination {
+  position: absolute;
+  width: auto !important;
+  top: 0;
+  left: 0 !important;
+  margin: 0;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  padding: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  width: 40px;
+  height: 12px;
+}
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+
+.swiper-slide {
+  margin-top: 42px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-wrapper svg {
+  width: 300px;
+}
+
+@media (max-width = 375px) {
+  .swiper__area {
+    width: 1000px;
+  }
+}

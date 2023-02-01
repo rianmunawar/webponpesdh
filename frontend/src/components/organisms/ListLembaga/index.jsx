@@ -3,7 +3,7 @@ import React from "react";
 export default function ListLembaga() {
   return (
     <>
-      <section className="p-4 grey-bg">
+      <section className="p-4 grey-bg mb-100">
         <div className="container text-center">
           <div className="row justify-content-center">
             <div className="col-12 col-md-6 col-lg-4 py-4">

@@ -5,7 +5,7 @@ import "./fasilitas.css";
 export default function Fasilitas() {
   return (
     <>
-      <section className="fasilitas__area mb-100 p-5">
+      <section className="fasilitas__area mb-100 p-5" id="fasilitas">
         <div className="container">
           <div className="row">
             <div className="text-wrapper text-center">
@@ -38,7 +38,7 @@ export default function Fasilitas() {
               </div>
               <div className="fasilitas-item-text">
                 <div className="fasilitas-item-title green-bg text-center">
-                  <h4 className="text-white mt-3">Masjid Raudhatul Jannah</h4>
+                  <h4 className="text-white mt-3">Lapangan Olahraga</h4>
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function Fasilitas() {
               </div>
               <div className="fasilitas-item-text">
                 <div className="fasilitas-item-title green-bg text-center">
-                  <h4 className="text-white mt-3">Masjid Raudhatul Jannah</h4>
+                  <h4 className="text-white mt-3">Ruang Kelas Nyaman</h4>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Fasilitas() {
               </div>
               <div className="fasilitas-item-text">
                 <div className="fasilitas-item-title green-bg text-center">
-                  <h4 className="text-white mt-3">Masjid Raudhatul Jannah</h4>
+                  <h4 className="text-white mt-3">Kantin</h4>
                 </div>
               </div>
             </div>

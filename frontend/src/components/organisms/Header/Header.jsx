@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import CtaBtn from "../../atoms/CtaBtn/CtaBtn";
 import "./header.css";
 
@@ -140,44 +141,30 @@ function Header() {
                     as={"ul"}
                   >
                     <Nav.Link className="navlink" as={"li"}>
-                      <NavLink
-                        to={"/ppdb#profil"}
+                      <HashLink
+                        to="/ppdb#profil"
+                        smooth
                         className={({ isActive }) =>
                           isActive ? activeLink : normal
                         }
                       >
-                        Tentang Kami
-                      </NavLink>
+                        Profil Kami
+                      </HashLink>
                     </Nav.Link>
                     <Nav.Link className="navlink" as={"li"}>
-                      <NavLink
-                        to={"/ppdb#informasi"}
-                        className={({ isActive }) =>
-                          isActive ? activeLink : normal
-                        }
-                      >
-                        Informasi PPDB
-                      </NavLink>
+                      <HashLink to="/ppdb#informasi" smooth>
+                        Informasi
+                      </HashLink>
                     </Nav.Link>
                     <Nav.Link className="navlink" as={"li"}>
-                      <NavLink
-                        to={"/ppdb#fasilitas"}
-                        className={({ isActive }) =>
-                          isActive ? activeLink : normal
-                        }
-                      >
+                      <HashLink to="/ppdb#fasilitas" smooth>
                         Fasilitas
-                      </NavLink>
+                      </HashLink>
                     </Nav.Link>
                     <Nav.Link className="navlink" as={"li"}>
-                      <NavLink
-                        to={"/ppdb#kontak"}
-                        className={({ isActive }) =>
-                          isActive ? activeLink : normal
-                        }
-                      >
+                      <HashLink to="/ppdb#kontak" smooth>
                         Kontak
-                      </NavLink>
+                      </HashLink>
                     </Nav.Link>
                     <CtaBtn
                       className="header__btn ml-20 d-none d-sm-block"
