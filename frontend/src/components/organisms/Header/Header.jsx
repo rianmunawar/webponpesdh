@@ -129,7 +129,7 @@ function Header() {
                       </NavLink>
                     </Nav.Link>
                     <CtaBtn
-                      className="header__btn ml-20 d-none d-sm-block"
+                      className="header__btn ml-20 d-block"
                       classChild="e-btn"
                       label="Info PPDB"
                       link="/ppdb"
@@ -167,7 +167,7 @@ function Header() {
                       </HashLink>
                     </Nav.Link>
                     <CtaBtn
-                      className="header__btn ml-20 d-none d-sm-block"
+                      className="header__btn ml-20 d-block"
                       classChild="e-btn"
                       label="Daftar Sekarang"
                       link="/ppdb/formulir-pendaftaran"
