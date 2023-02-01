@@ -16,7 +16,7 @@ export default function HeroPpdb() {
               <div className="hero-text">
                 <h1 className="hero-title">
                   PPDB Online <br />
-                  Yayasan Darul Hikmah Purwakarta
+                  Ponpes Darul Hikmah Purwakarta
                 </h1>
                 <p className="herro-description">
                   Mari bergabung bersama kami membuka jalan menuju masa depan
