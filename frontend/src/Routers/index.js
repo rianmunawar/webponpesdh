@@ -5,6 +5,7 @@ import BeritaPage from "../pages/BeritaPage";
 import KontakPage from "../pages/KontakPage";
 import Mak from "../pages/Mak";
 import NotFoundPage from "../pages/NotFoundPage";
+import Pendaftaran from "../pages/Pendaftaran";
 import Ppdb from "../pages/Ppdb";
 import ProfilPage from "../pages/ProfilPage";
 
@@ -17,6 +18,7 @@ function Routers() {
       <Route path="/kontak" element={<KontakPage />} />
       <Route path="/mak" element={<Mak />} />
       <Route path="/ppdb" element={<Ppdb />} />
+      <Route path="/ppdb/formulir-pendaftaran" element={<Pendaftaran />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

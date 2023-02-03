@@ -1,0 +1,10 @@
+fieldset {
+  border: 1px solid #00113a !important;
+  padding: 32px !important;
+}
+
+@media (max-width: 375px) {
+  fieldset {
+    padding: 20px;
+  }
+}
