@@ -1,13 +1,12 @@
 import React from "react";
+import ToTopBtn from "../../components/atoms/ToTopBtn";
 import FormPendaftaran from "../../components/organisms/FormPendaftaran";
-import Layout from "../../Layout";
 
 export default function Pendaftaran() {
   return (
     <>
-      <Layout>
-        <FormPendaftaran />
-      </Layout>
+      <FormPendaftaran />
+      <ToTopBtn />
     </>
   );
 }

@@ -400,6 +400,26 @@ p {
   }
 }
 
+.btn.btn-primary {
+  color: #ffffff;
+  background: #2b4eff;
+  border: 1px solid #2b4eff;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn.btn-primary:hover {
+  color: #ffffff;
+  background: #1d3ddd;
+}
+
+.btn.btn-danger {
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .e-btn {
   display: inline-block;
   height: 50px;

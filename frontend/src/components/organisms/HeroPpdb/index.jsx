@@ -9,6 +9,7 @@ export default function HeroPpdb() {
       <section
         className="banner-ppd__area pt-4 pb-5 blue-bg-3 mb-100"
         style={{ marginTop: 80 }}
+        id="banner"
       >
         <div className="container">
           <div className="row align-items-center hero-wrapper">

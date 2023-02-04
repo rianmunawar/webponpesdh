@@ -141,13 +141,7 @@ function Header() {
                     as={"ul"}
                   >
                     <Nav.Link className="navlink" as={"li"}>
-                      <HashLink
-                        to="/ppdb#profil"
-                        smooth
-                        className={({ isActive }) =>
-                          isActive ? activeLink : normal
-                        }
-                      >
+                      <HashLink to="/ppdb#profil" smooth>
                         Profil Kami
                       </HashLink>
                     </Nav.Link>

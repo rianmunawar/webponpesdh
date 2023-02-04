@@ -25,7 +25,7 @@ export default function WhyUs() {
           <div className="text-wrapper mb-5">
             <h1 className="section__title">
               Kenapa Harus <br />
-              Yayasan Darul Hikmah
+              Ponpes Darul Hikmah
             </h1>
           </div>
           <Swiper
