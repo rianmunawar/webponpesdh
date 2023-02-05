@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       nik: DataTypes.NUMBER,
       tempat_lahir: DataTypes.STRING,
       dob: DataTypes.DATE,
-      j_kelamain: {
+      j_kelamin: {
         type: DataTypes.ENUM("perempuan", "laki-laki"),
         defaultValue: "laki-laki",
       },
@@ -51,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "Pendaftaran",
+      freezeTableName: true,
     }
   );
   return Pendaftaran;

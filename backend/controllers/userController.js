@@ -26,8 +26,6 @@ const createUser = async (req, res) => {
 const getAllUser = async (req, res) => {
   try {
     const data = await User.findAll();
-    if (data === null)
-      response(200, "data belum ada", "Data belum tersedia", res);
 
     response(200, data, "Menampilkan Semua Data User", res);
   } catch (error) {

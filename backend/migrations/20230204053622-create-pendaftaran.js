@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable(
-      "Pendaftaran",
+      "pendaftaran",
       {
         id: {
           allowNull: false,
@@ -18,10 +18,10 @@ module.exports = {
           type: Sequelize.STRING,
         },
         nisn: {
-          type: Sequelize.NUMBER,
+          type: Sequelize.INTEGER,
         },
         nik: {
-          type: Sequelize.NUMBER,
+          type: Sequelize.INTEGER,
         },
         tempat_lahir: {
           type: Sequelize.STRING,
@@ -29,7 +29,7 @@ module.exports = {
         dob: {
           type: Sequelize.DATE,
         },
-        j_kelamain: {
+        j_kelamin: {
           type: Sequelize.ENUM("perempuan", "laki-laki"),
           defaultValue: "laki-laki",
         },
@@ -47,7 +47,7 @@ module.exports = {
           type: Sequelize.STRING,
         },
         no_hp: {
-          type: Sequelize.NUMBER,
+          type: Sequelize.INTEGER,
         },
         asal_sekolah: {
           type: Sequelize.STRING,
@@ -59,10 +59,10 @@ module.exports = {
           type: Sequelize.STRING,
         },
         nik_ayah: {
-          type: Sequelize.NUMBER,
+          type: Sequelize.INTEGER,
         },
         dob_ayah: {
-          type: Sequelize.DATE,
+          type: Sequelize.INTEGER,
         },
         pend_ayah: {
           type: Sequelize.STRING,
@@ -80,10 +80,10 @@ module.exports = {
           type: Sequelize.STRING,
         },
         nik_ibu: {
-          type: Sequelize.NUMBER,
+          type: Sequelize.INTEGER,
         },
         dob_ibu: {
-          type: Sequelize.DATE,
+          type: Sequelize.INTEGER,
         },
         pend_ibu: {
           type: Sequelize.STRING,
@@ -116,6 +116,6 @@ module.exports = {
     );
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Pendaftaran");
+    await queryInterface.dropTable("pendaftaran");
   },
 };
