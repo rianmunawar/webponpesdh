@@ -9,6 +9,7 @@ const KontakForm = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const endpoint = process.env.REACT_APP_ENDPOINT;
+  console.log(endpoint);
 
   // notif
   const successMessage = () => {
@@ -23,9 +24,13 @@ const KontakForm = () => {
     axios
       .post(`${endpoint}/send-email`, { name, email, subject, message })
       .then((res) => {
+        console.log(res.data);
         successMessage();
       })
-      .catch((err) => errorMessage());
+      .catch((err) => {
+        console.log(err);
+        errorMessage();
+      });
 
     setName("");
     setEmail("");

@@ -31,7 +31,7 @@ const emailController = (req, res) => {
         response(200, data, "email sent", res);
       },
       function (error) {
-        response(400, "no data", error.message, res);
+        response(400, "no data", error.response.data, res);
       }
     );
 };
