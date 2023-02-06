@@ -36,8 +36,8 @@ jobs:
           local-dir: ./frontend/build/
 
       - name: 🔨 Build Api
-        uses: ./backend/
         run: |
+          cd backend
           git pull
           npm ci
 
