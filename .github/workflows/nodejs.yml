@@ -34,3 +34,22 @@ jobs:
             **/.git*/**
             **/node_modules/**
           local-dir: ./frontend/build/
+
+      - name: 🔨 Build Api
+        uses: ./backend/
+        run: |
+          git pull
+          npm ci
+
+      - name: 📂 Sync Api files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER_API}}
+          password: ${{ secrets.FTP_PASSWORD}}
+          exclude: |
+            **/.git*
+            **/.env*
+            **/.git*/**
+            **/node_modules/**
+          local-dir: ./backend/
