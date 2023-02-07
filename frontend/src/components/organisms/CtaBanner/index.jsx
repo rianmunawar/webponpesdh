@@ -7,13 +7,13 @@ const CtaBanner = () => {
       <div className="container">
         <div className="cta__inner blue-bg fix">
           <div className="cta__shape">
-            <img src={shapeCta} alt />
+            <img src={shapeCta} alt={"shape-cta"} />
           </div>
           <div className="row align-items-center">
             <div className="col-xxl-7 col-xl-7 col-lg-8 col-md-8">
               <div className="cta__content">
                 <h3 className="cta__title">
-                  Lihat detail informasi PPDB Ponpes Darul Hikmah
+                  PPDB Ponpes Darul Hikmah 2023/2024
                 </h3>
               </div>
             </div>

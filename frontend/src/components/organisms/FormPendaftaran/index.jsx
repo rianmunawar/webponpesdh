@@ -18,6 +18,9 @@ export default function FormPendaftaran() {
     console.log(data);
     reset();
   };
+
+  const endpoint = process.env.REACT_APP_ENDPOINT;
+  console.log(endpoint);
   return (
     <>
       <section className="form__area mb-100 mt-4" id="form">
@@ -398,7 +401,7 @@ export default function FormPendaftaran() {
                   })}
                 >
                   <option value={""}>Pilih pendidikan</option>
-                  <option value="ts">Tidak Sekolah</option>
+                  <option value="tidak sekolah">Tidak Sekolah</option>
                   <option value="sd">SD/Sederajat</option>
                   <option value="smp">SMP/Sederajat</option>
                   <option value="sma">SMA/Sederajat</option>
@@ -429,18 +432,18 @@ export default function FormPendaftaran() {
                   })}
                 >
                   <option value={""}>Pilih Pekerjaan</option>
-                  <option value="tk">Tidak Kerja</option>
-                  <option value="nl">Nelayan</option>
-                  <option value="pt">Petani</option>
-                  <option value="ptr">Peternak</option>
-                  <option value="sipil">PNS/TNI/POLRI</option>
-                  <option value="ks">Karyawan Swasta</option>
-                  <option value="pd">Pedagang</option>
-                  <option value="wra">Wiraswasta</option>
-                  <option value="wu">Wirausaha</option>
-                  <option value="bu">Buruh</option>
-                  <option value="pensi">Pensiunan</option>
-                  <option value="lainnya">Lainnya</option>
+                  <option value="Tidak Kerja">Tidak Kerja</option>
+                  <option value="Nelayan">Nelayan</option>
+                  <option value="Petani">Petani</option>
+                  <option value="Peternak">Peternak</option>
+                  <option value="PNS/TNI/POLRI">PNS/TNI/POLRI</option>
+                  <option value="Karyawan Swasta">Karyawan Swasta</option>
+                  <option value="Pedagang">Pedagang</option>
+                  <option value="Wiraswasta">Wiraswasta</option>
+                  <option value="Wirausaha">Wirausaha</option>
+                  <option value="Buruh">Buruh</option>
+                  <option value="Pensiunan">Pensiunan</option>
+                  <option value="Lainnya">Lainnya</option>
                 </select>
                 {errors.pekAyah?.type === "required" && (
                   <small className="text-danger">
@@ -462,12 +465,15 @@ export default function FormPendaftaran() {
                   })}
                 >
                   <option value={""}>Pilih Penghasilan Bulanan</option>
-                  <option value="01"> Kurang dari 500.000</option>
-                  <option value="02">500.000 - 999.999</option>
-                  <option value="03">1 Juta - 1.999.999</option>
-                  <option value="04">2 Juta - 4.999.999</option>
-                  <option value="05">5 Juta - 20 Juta</option>
-                  <option value="06">Lebih dari 20 Juta</option>
+                  <option value="kurang dari 500.000">
+                    {" "}
+                    Kurang dari 500.000
+                  </option>
+                  <option value="500.000 - 999.999">500.000 - 999.999</option>
+                  <option value="1 Juta - 1.999.999">1 Juta - 1.999.999</option>
+                  <option value="2 Juta - 4.999.999">2 Juta - 4.999.999</option>
+                  <option value="5 Juta - 20 Juta">5 Juta - 20 Juta</option>
+                  <option value="Lebih dari 20 Juta">Lebih dari 20 Juta</option>
                 </select>
                 {errors.pengAyah?.type === "required" && (
                   <small className="text-danger">
@@ -550,7 +556,7 @@ export default function FormPendaftaran() {
                   })}
                 >
                   <option value={""}>Pilih pendidikan</option>
-                  <option value="ts">Tidak Sekolah</option>
+                  <option value="tidak sekolah">Tidak Sekolah</option>
                   <option value="sd">SD/Sederajat</option>
                   <option value="smp">SMP/Sederajat</option>
                   <option value="sma">SMA/Sederajat</option>
@@ -581,18 +587,18 @@ export default function FormPendaftaran() {
                   })}
                 >
                   <option value={""}>Pilih Pekerjaan</option>
-                  <option value="tk">Tidak Kerja / IRT</option>
-                  <option value="nl">Nelayan</option>
-                  <option value="pt">Petani</option>
-                  <option value="ptr">Peternak</option>
-                  <option value="sipil">PNS/TNI/POLRI</option>
-                  <option value="ks">Karyawan Swasta</option>
-                  <option value="pd">Pedagang</option>
-                  <option value="wra">Wiraswasta</option>
-                  <option value="wu">Wirausaha</option>
-                  <option value="bu">Buruh</option>
-                  <option value="pensi">Pensiunan</option>
-                  <option value="lainnya">Lainnya</option>
+                  <option value="Tidak Kerja / IRT">Tidak Kerja / IRT</option>
+                  <option value="Nelayan">Nelayan</option>
+                  <option value="Petani">Petani</option>
+                  <option value="Peternak">Peternak</option>
+                  <option value="PNS/TNI/POLRI">PNS/TNI/POLRI</option>
+                  <option value="Karyawan Swasta">Karyawan Swasta</option>
+                  <option value="Pedagang">Pedagang</option>
+                  <option value="Wiraswasta">Wiraswasta</option>
+                  <option value="Wirausaha">Wirausaha</option>
+                  <option value="Buruh">Buruh</option>
+                  <option value="Pensiunan">Pensiunan</option>
+                  <option value="Lainnya">Lainnya</option>
                 </select>
                 {errors.pekIbu?.type === "required" && (
                   <small className="text-danger">
@@ -606,13 +612,16 @@ export default function FormPendaftaran() {
                   Penghasilan Bulanan
                 </label>
                 <select name="peng-ibu" id="peng-ibu" className="form-select">
-                  <option defaultValue={""}>Pilih Penghasilan Bulanan</option>
-                  <option value="01"> Kurang dari 500.000</option>
-                  <option value="02">500.000 - 999.999</option>
-                  <option value="03">1 Juta - 1.999.999</option>
-                  <option value="04">2 Juta - 4.999.999</option>
-                  <option value="05">5 Juta - 20 Juta</option>
-                  <option value="06">Lebih dari 20 Juta</option>
+                  <option value={""}>Pilih Penghasilan Bulanan</option>
+                  <option value="kurang dari 500.000">
+                    {" "}
+                    Kurang dari 500.000
+                  </option>
+                  <option value="500.000 - 999.999">500.000 - 999.999</option>
+                  <option value="1 Juta - 1.999.999">1 Juta - 1.999.999</option>
+                  <option value="2 Juta - 4.999.999">2 Juta - 4.999.999</option>
+                  <option value="5 Juta - 20 Juta">5 Juta - 20 Juta</option>
+                  <option value="Lebih dari 20 Juta">Lebih dari 20 Juta</option>
                 </select>
               </div>
               <FormInput

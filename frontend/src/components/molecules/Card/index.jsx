@@ -18,9 +18,6 @@ const Card = (props) => {
         </h3>
         <div className="blog__meta d-flex align-items-center justify-content-between">
           <div className="blog__author d-flex align-items-center">
-            <div className="blog__author-thumb mr-10">
-              <img src={props.authorPic} alt="gambar" />
-            </div>
             <div className="blog__author-info">
               <h5>{props.author}</h5>
             </div>
@@ -38,7 +35,6 @@ const Card = (props) => {
 Card.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  authorPic: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   imgAlt: PropTypes.string.isRequired,

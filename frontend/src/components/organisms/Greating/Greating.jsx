@@ -7,7 +7,7 @@ import shapeDot from "../../../assets/img/why/why-shape-dot.png";
 import shapeLine from "../../../assets/img/why/why-shape-line.png";
 import img from "../../../assets/img/why/why.png";
 
-const Greating = (props) => {
+const Greating = () => {
   return (
     <section className="why__area pt-100">
       <div className="container">
@@ -54,11 +54,11 @@ const Greating = (props) => {
           </div>
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
             <div className="why__thumb">
-              <img src={img} alt />
-              <img className="why-green" src={shapeGreen} alt />
-              <img className="why-pink" src={shapePink} alt />
-              <img className="why-dot" src={shapeDot} alt />
-              <img className="why-line" src={shapeLine} alt />
+              <img src={img} alt={`ketua yayasan`} />
+              <img className="why-green" src={shapeGreen} alt={"element"} />
+              <img className="why-pink" src={shapePink} alt={"element"} />
+              <img className="why-dot" src={shapeDot} alt={"element"} />
+              <img className="why-line" src={shapeLine} alt={"element"} />
             </div>
           </div>
         </div>

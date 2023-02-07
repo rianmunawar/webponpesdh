@@ -11,8 +11,8 @@ const History = () => {
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
             <div className="why__thumb">
               <iframe src="https://www.youtube-nocookie.com/embed/hM5tPRBp8YE" />
-              <img className="why-green" src={shapeGreen} alt="" />
-              <img className="why-pink" src={shapePink} alt />
+              <img className="why-green" src={shapeGreen} alt={"element"} />
+              <img className="why-pink" src={shapePink} alt={"element"} />
             </div>
           </div>
           <div className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">

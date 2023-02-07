@@ -2,7 +2,7 @@ import React from "react";
 import IconYellowList from "../../atoms/IconYellowList";
 import Card from "../../molecules/Card";
 import image1 from "../../../assets/img/blog/blog-1.jpg";
-import authorPic from "../../../assets/img/blog/blog-1.jpg";
+import { HashLink } from "react-router-hash-link";
 
 const Berita = () => {
   return (
@@ -28,14 +28,11 @@ const Berita = () => {
           <div className="col-xxl-7 col-xl-6 col-lg-6">
             <div className="course__menu d-flex justify-content-lg-end mb-60">
               <div className="masonary-menu filter-button-group">
-                <button className="active" data-filter="*">
-                  See All
-                  <span className="tag">new</span>
+                <button>
+                  <HashLink to={"/blog#berita"} className="text-disable">
+                    Lihat semua...
+                  </HashLink>
                 </button>
-                <button data-filter=".cat1">Trending</button>
-                <button data-filter=".cat2">Popularity</button>
-                <button data-filter=".cat3">Featured</button>
-                <button data-filter=".cat4">Art &amp; Design</button>
               </div>
             </div>
           </div>
@@ -48,7 +45,6 @@ const Berita = () => {
               tag="islami"
               imgAlt="gambar"
               imgUrl={image1}
-              authorPic={authorPic}
               author="admin"
               updatedAt="Juni, 12 2022"
             />
@@ -60,7 +56,6 @@ const Berita = () => {
               tag="islami"
               imgAlt="gambar"
               imgUrl={image1}
-              authorPic={authorPic}
               author="admin"
               updatedAt="Juni, 12 2022"
             />
@@ -72,7 +67,6 @@ const Berita = () => {
               tag="islami"
               imgAlt="gambar"
               imgUrl={image1}
-              authorPic={authorPic}
               author="admin"
               updatedAt="Juni, 12 2022"
             />
