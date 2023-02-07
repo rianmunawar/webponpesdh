@@ -2,12 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const FormInput = React.forwardRef((props, ref) => {
-  const { label, type, name, className, mb, error, onKeyUp, ...propInput } =
-    props;
+  const {
+    label,
+    type,
+    name,
+    className,
+    mb,
+    error,
+    onKeyUp,
+    isRequired,
+    ...propInput
+  } = props;
   return (
     <div className={`mb-${mb}`}>
       <label className="form-label text-black" htmlFor={name}>
         {label}
+        {isRequired ? <span className="text-danger">*</span> : ""}
       </label>
       <input
         type={type}
@@ -15,9 +25,7 @@ const FormInput = React.forwardRef((props, ref) => {
         name={name}
         {...propInput}
         ref={ref}
-        onKeyUp={() => {
-          onKeyUp;
-        }}
+        onKeyUp={() => onKeyUp}
       />
       {error}
     </div>
@@ -26,6 +34,7 @@ const FormInput = React.forwardRef((props, ref) => {
 
 FormInput.defaultProps = {
   className: "form-control",
+  isRequired: false,
 };
 
 FormInput.propTypes = {
@@ -34,6 +43,7 @@ FormInput.propTypes = {
   name: PropTypes.string.isRequired,
   mb: PropTypes.string.isRequired,
   className: PropTypes.string,
+  isRequired: PropTypes.bool,
 };
 
 export default FormInput;

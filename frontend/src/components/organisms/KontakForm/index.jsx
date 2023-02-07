@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { successMessage, errorMessage } from "../../atoms/alert/alert";
 
 const KontakForm = () => {
   const [name, setName] = useState("");
@@ -11,25 +12,16 @@ const KontakForm = () => {
   const endpoint = process.env.REACT_APP_ENDPOINT;
   console.log(endpoint);
 
-  // notif
-  const successMessage = () => {
-    toast.success("Email berhasil dikirim !");
-  };
-  const errorMessage = () => {
-    toast.error("Gagal kirim email, pastikan semua kolom di isi!");
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post(`${endpoint}/send-email`, { name, email, subject, message })
       .then((res) => {
         console.log(res.data);
-        successMessage();
+        successMessage(res.data.message);
       })
       .catch((err) => {
-        console.log(err);
-        errorMessage();
+        errorMessage(err.message);
       });
 
     setName("");

@@ -3,6 +3,10 @@ import { HashLink } from "react-router-hash-link";
 import { useForm } from "react-hook-form";
 import FormInput from "../../atoms/FormInput";
 import "./form.css";
+import axios from "axios";
+import { errorMessage, successMessage } from "../../atoms/alert/alert";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function FormPendaftaran() {
   const {
@@ -13,18 +17,24 @@ export default function FormPendaftaran() {
     watch,
     formState: { errors },
   } = useForm();
+
   const jenjang = watch("jenjang");
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
-  };
 
   const endpoint = process.env.REACT_APP_ENDPOINT;
-  console.log(endpoint);
+
+  const onSubmit = async (data) => {
+    await axios
+      .post(`${endpoint}/pendaftaran`, { ...data })
+      .then((res) => successMessage(res.data.message))
+      .catch((err) => errorMessage(err.message));
+    // reset();
+  };
+
   return (
     <>
       <section className="form__area mb-100 mt-4" id="form">
         <div className="container">
+          <ToastContainer />
           <div className="text-wrapper text-center">
             <h2 className="section__title mb-3">Formulir Pendaptaran</h2>
             <h4 className="mb-3">PPDB Ponpes Darul Hikmah 2023/2024</h4>
@@ -35,6 +45,7 @@ export default function FormPendaftaran() {
               <div className="mb-3">
                 <label htmlFor="jenjang" className="form-label text-black">
                   Jenjang Pendaftaran
+                  <span className="text-danger">*</span>
                 </label>
                 <select
                   name="jenjang"
@@ -64,6 +75,7 @@ export default function FormPendaftaran() {
                   name="nisn"
                   type="number"
                   mb="3"
+                  isRequired
                   className={`form-control ${errors.nisn && "is-invalid"}`}
                   {...register("nisn", {
                     required: "NISN Wajib Di isi",
@@ -92,6 +104,7 @@ export default function FormPendaftaran() {
                 label="Nama Lengkap"
                 name="nama"
                 type="text"
+                isRequired
                 mb="3"
                 className={`form-control ${errors.nama && "is-invalid"}`}
                 {...register("nama", { required: "Nama Wajib Di isi" })}
@@ -108,6 +121,7 @@ export default function FormPendaftaran() {
                 label="NIK / No. KITAS"
                 name="nik"
                 type="number"
+                isRequired
                 mb="3"
                 className={`form-control ${errors.nik && "is-invalid"}`}
                 {...register("nik", { required: "Nik Wajib Di isi" })}
@@ -121,13 +135,16 @@ export default function FormPendaftaran() {
                 label="Tempat Lahir"
                 name="tempat-lahir"
                 type="text"
+                isRequired
                 mb="3"
-                className={`form-control ${errors.tempatLahir && "is-invalid"}`}
-                {...register("tempatLahir", {
+                className={`form-control ${
+                  errors.tempat_lahir && "is-invalid"
+                }`}
+                {...register("tempat_lahir", {
                   required: "Tempat Lahir Wajib Di isi",
                 })}
                 error={
-                  errors.tempatLahir?.type === "required" && (
+                  errors.tempat_lahir?.type === "required" && (
                     <small className="text-danger">
                       {" "}
                       {errors.tempatLahir.message}
@@ -139,6 +156,7 @@ export default function FormPendaftaran() {
                 label="Tanggal Lahir"
                 name="dob"
                 type="date"
+                isRequired
                 mb="3"
                 className={`form-control ${errors.dob && "is-invalid"}`}
                 {...register("dob", { required: "Tanggal Lahir Wajib Di isi" })}
@@ -149,18 +167,23 @@ export default function FormPendaftaran() {
                 }
               />
               <div className="mb-3">
-                <label className="text-black form-label">Jenis Kelamin</label>
+                <label className="text-black form-label">
+                  Jenis Kelamin
+                  <span className="text-danger">*</span>
+                </label>
                 <div className="form-check">
                   <label className="form-check-label" htmlFor="male">
                     Laki-laki
                   </label>
                   <input
                     type="radio"
-                    name="jk"
+                    name="j_kelamin"
                     id="male"
                     value={"male"}
-                    className={`form-check-input ${errors.jk && "is-invalid"}`}
-                    {...register("jk", {
+                    className={`form-check-input ${
+                      errors.j_kelamin && "is-invalid"
+                    }`}
+                    {...register("j_kelamin", {
                       required: "Pilih Jenis Kelamin anda",
                     })}
                   />
@@ -171,22 +194,28 @@ export default function FormPendaftaran() {
                   </label>
                   <input
                     type="radio"
-                    className={`form-check-input ${errors.jk && "is-invalid"}`}
-                    name="jk"
+                    className={`form-check-input ${
+                      errors.j_kelamin && "is-invalid"
+                    }`}
+                    name="j_kelamin"
                     id="female"
                     value={"female"}
-                    {...register("jk", {
+                    {...register("j_kelamin", {
                       required: "Pilih Jenis Kelamin anda",
                     })}
                   />
                 </div>
-                {errors.jk?.type === "required" && (
-                  <small className="text-danger"> {errors.jk.message}</small>
+                {errors.j_kelamin?.type === "required" && (
+                  <small className="text-danger">
+                    {" "}
+                    {errors.j_kelamin.message}
+                  </small>
                 )}
               </div>
               <div className="mb-3">
                 <label className="form-label text-black">
                   Alamat Tempat Tinggal
+                  <span className="text-danger">*</span>
                 </label>
                 <textarea
                   name="alamat"
@@ -206,6 +235,7 @@ export default function FormPendaftaran() {
               <div className="mb-3">
                 <label htmlFor="agama" className="text-black form-label">
                   Pilih Agama
+                  <span className="text-danger">*</span>
                 </label>
                 <select
                   name="agama"
@@ -225,7 +255,10 @@ export default function FormPendaftaran() {
                 )}
               </div>
               <div className="mb-3">
-                <label className="text-black form-label">Kewarganegaraan</label>
+                <label className="text-black form-label">
+                  Kewarganegaraan
+                  <span className="text-danger">*</span>
+                </label>
                 <div className="form-check">
                   <label className="form-check-label" htmlFor="wni">
                     WNI
@@ -271,6 +304,7 @@ export default function FormPendaftaran() {
                 label="E-Mail"
                 name="email"
                 type="email"
+                isRequired
                 mb="3"
                 className={`form-control ${errors.email && "is-invalid"}`}
                 {...register("email", { required: "email Wajib Di isi" })}
@@ -287,11 +321,12 @@ export default function FormPendaftaran() {
                 label="No. Handphone"
                 name="hp"
                 type="number"
+                isRequired
                 mb="3"
-                className={`form-control ${errors.hp && "is-invalid"}`}
-                {...register("hp", { required: "No. Hp Wajib Di isi" })}
+                className={`form-control ${errors.no_hp && "is-invalid"}`}
+                {...register("no_hp", { required: "No. Hp Wajib Di isi" })}
                 error={
-                  errors.hp?.type === "required" && (
+                  errors.no_hp?.type === "required" && (
                     <small className="text-danger"> {errors.hp.message}</small>
                   )
                 }
@@ -308,16 +343,17 @@ export default function FormPendaftaran() {
                   label="Asal Sekolah"
                   name="asal-sekolah"
                   type="text"
+                  isRequired
                   mb="3"
                   className={`form-control ${
-                    errors.asalSekolah && "is-invalid"
+                    errors.asal_sekolah && "is-invalid"
                   }`}
-                  {...register("asalSekolah", { required: "Wajib di isi" })}
+                  {...register("asal_sekolah", { required: "Wajib di isi" })}
                   error={
-                    errors.asalSekolah?.type === "required" && (
+                    errors.asal_sekolah?.type === "required" && (
                       <small className="text-danger">
                         {" "}
-                        {errors.asalSekolah.message}
+                        {errors.asal_sekolah.message}
                       </small>
                     )
                   }
@@ -327,7 +363,7 @@ export default function FormPendaftaran() {
                   name="ijazah"
                   type="text"
                   mb="3"
-                  {...register("noIjazah")}
+                  {...register("no_ijazah")}
                 />
               </fieldset>
             )}
@@ -339,17 +375,18 @@ export default function FormPendaftaran() {
               <FormInput
                 label="Nama Ayah"
                 name="nama-ayah"
+                isRequired
                 type="text"
                 mb="3"
-                className={`form-control ${errors.namaAyah && "is-invalid"}`}
-                {...register("namaAyah", {
+                className={`form-control ${errors.nama_ayah && "is-invalid"}`}
+                {...register("nama_ayah", {
                   required: "Nama Ayah Wajib Di isi",
                 })}
                 error={
-                  errors.namaAyah?.type === "required" && (
+                  errors.nama_ayah?.type === "required" && (
                     <small className="text-danger">
                       {" "}
-                      {errors.namaAyah.message}
+                      {errors.nama_ayah.message}
                     </small>
                   )
                 }
@@ -358,14 +395,15 @@ export default function FormPendaftaran() {
                 label="NIK Ayah"
                 name="nik-ayah"
                 type="number"
+                isRequired
                 mb="3"
-                className={`form-control ${errors.nikAyah && "is-invalid"}`}
-                {...register("nikAyah", { required: "NIK Ayah Wajib Di isi" })}
+                className={`form-control ${errors.nik_ayah && "is-invalid"}`}
+                {...register("nik_ayah", { required: "NIK Ayah Wajib Di isi" })}
                 error={
-                  errors.nikAyah?.type === "required" && (
+                  errors.nik_ayah?.type === "required" && (
                     <small className="text-danger">
                       {" "}
-                      {errors.nikAyah.message}
+                      {errors.nik_ayah.message}
                     </small>
                   )
                 }
@@ -374,16 +412,17 @@ export default function FormPendaftaran() {
                 label="Tahun Lahir"
                 name="dob-ayah"
                 type="number"
+                isRequired
                 mb="3"
-                className={`form-control ${errors.dobAyah && "is-invalid"}`}
-                {...register("dobAyah", {
+                className={`form-control ${errors.dob_ayah && "is-invalid"}`}
+                {...register("dob_ayah", {
                   required: "Tanggal Lahir Wajib Di isi",
                 })}
                 error={
-                  errors.dobAyah?.type === "required" && (
+                  errors.dob_ayah?.type === "required" && (
                     <small className="text-danger">
                       {" "}
-                      {errors.dobAyah.message}
+                      {errors.dob_ayah.message}
                     </small>
                   )
                 }
@@ -391,12 +430,13 @@ export default function FormPendaftaran() {
               <div className="mb-3">
                 <label htmlFor="pend-ayah" className="text-black form-label">
                   Pendidikan
+                  <span className="text-danger">*</span>
                 </label>
                 <select
                   name="pend-ayah"
                   id="pend-ayah"
-                  className={`form-select ${errors.pendAyah && "is-invalid"}`}
-                  {...register("pendAyah", {
+                  className={`form-select ${errors.pend_ayah && "is-invalid"}`}
+                  {...register("pend_ayah", {
                     required: "Pendidikan Ayah wajib di isi",
                   })}
                 >
@@ -412,22 +452,23 @@ export default function FormPendaftaran() {
                   <option value="s2">S2</option>
                   <option value="s3">S3</option>
                 </select>
-                {errors.pendAyah?.type === "required" && (
+                {errors.pend_ayah?.type === "required" && (
                   <small className="text-danger">
                     {" "}
-                    {errors.pendAyah.message}
+                    {errors.pend_ayah.message}
                   </small>
                 )}
               </div>
               <div className="mb-3">
                 <label htmlFor="pek-ayah" className="text-black form-label">
                   Pekerjaan
+                  <span className="text-danger">*</span>
                 </label>
                 <select
                   name="pek-ayah"
                   id="pek-ayah"
-                  className={`form-select ${errors.pekAyah && "is-invalid"}`}
-                  {...register("pekAyah", {
+                  className={`form-select ${errors.pek_ayah && "is-invalid"}`}
+                  {...register("pek_ayah", {
                     required: "Pekerjaan ayah wajib di isi",
                   })}
                 >
@@ -445,22 +486,23 @@ export default function FormPendaftaran() {
                   <option value="Pensiunan">Pensiunan</option>
                   <option value="Lainnya">Lainnya</option>
                 </select>
-                {errors.pekAyah?.type === "required" && (
+                {errors.pek_ayah?.type === "required" && (
                   <small className="text-danger">
                     {" "}
-                    {errors.pekAyah.message}
+                    {errors.pek_ayah.message}
                   </small>
                 )}
               </div>
               <div className="mb-3">
                 <label htmlFor="peng-ayah" className="text-black form-label">
                   Penghasilan Bulanan
+                  <span className="text-danger">*</span>
                 </label>
                 <select
                   name="peng-ayah"
                   id="peng-ayah"
-                  className={`form-select ${errors.pengAyah && "is-invalid"}`}
-                  {...register("pengAyah", {
+                  className={`form-select ${errors.peng_ayah && "is-invalid"}`}
+                  {...register("peng_ayah", {
                     required: "Penghasilan Ayah wajib di Isi",
                   })}
                 >
@@ -475,10 +517,10 @@ export default function FormPendaftaran() {
                   <option value="5 Juta - 20 Juta">5 Juta - 20 Juta</option>
                   <option value="Lebih dari 20 Juta">Lebih dari 20 Juta</option>
                 </select>
-                {errors.pengAyah?.type === "required" && (
+                {errors.peng_ayah?.type === "required" && (
                   <small className="text-danger">
                     {" "}
-                    {errors.pengAyah.message}
+                    {errors.peng_ayah.message}
                   </small>
                 )}
               </div>
@@ -487,22 +529,24 @@ export default function FormPendaftaran() {
                 name="disabilitas-ayah"
                 type="text"
                 mb="5"
+                {...register("disabilitas_ayah")}
               />
               <hr className="mb-5" />
               <FormInput
                 label="Nama Ibu"
                 name="nama-ibu"
                 type="text"
+                isRequired
                 mb="3"
-                className={`form-control ${errors.namaIbu && "is-invalid"}`}
-                {...register("namaIbu", {
+                className={`form-control ${errors.nama_ibu && "is-invalid"}`}
+                {...register("nama_ibu", {
                   required: "Nama Ibu wajib di isi",
                 })}
                 error={
-                  errors.namaIbu?.type === "required" && (
+                  errors.nama_ibu?.type === "required" && (
                     <small className="text-danger">
                       {" "}
-                      {errors.namaIbu.message}
+                      {errors.nama_ibu.message}
                     </small>
                   )
                 }
@@ -510,17 +554,18 @@ export default function FormPendaftaran() {
               <FormInput
                 label="NIK Ibu"
                 name="nik-ibu"
+                isRequired
                 type="number"
                 mb="3"
-                className={`form-control ${errors.nikIbu && "is-invalid"}`}
-                {...register("nikIbu", {
+                className={`form-control ${errors.nik_ibu && "is-invalid"}`}
+                {...register("nik_ibu", {
                   required: "NIK Ibu wajib di isi",
                 })}
                 error={
-                  errors.nikIbu?.type === "required" && (
+                  errors.nik_ibu?.type === "required" && (
                     <small className="text-danger">
                       {" "}
-                      {errors.nikIbu.message}
+                      {errors.nik_ibu.message}
                     </small>
                   )
                 }
@@ -528,17 +573,18 @@ export default function FormPendaftaran() {
               <FormInput
                 label="Tahun Lahir"
                 name="dob-ibu"
+                isRequired
                 type="number"
                 mb="3"
-                className={`form-control ${errors.dobIbu && "is-invalid"}`}
-                {...register("dobIbu", {
+                className={`form-control ${errors.dob_ibu && "is-invalid"}`}
+                {...register("dob_ibu", {
                   required: "Tahun lahir Ibu wajib di isi",
                 })}
                 error={
-                  errors.dobIbu?.type === "required" && (
+                  errors.dob_ibu?.type === "required" && (
                     <small className="text-danger">
                       {" "}
-                      {errors.dobIbu.message}
+                      {errors.dob_ibu.message}
                     </small>
                   )
                 }
@@ -546,12 +592,13 @@ export default function FormPendaftaran() {
               <div className="mb-3">
                 <label htmlFor="pend-ibu" className="text-black form-label">
                   Pendidikan
+                  <span className="text-danger">*</span>
                 </label>
                 <select
                   name="pend-ibu"
                   id="pend-ibu"
-                  className={`form-select ${errors.pendIbu && "is-invalid"}`}
-                  {...register("pendIbu", {
+                  className={`form-select ${errors.pend_ibu && "is-invalid"}`}
+                  {...register("pend_ibu", {
                     required: "Pendidikan Ibu wajib di isi",
                   })}
                 >
@@ -567,22 +614,23 @@ export default function FormPendaftaran() {
                   <option value="s2">S2</option>
                   <option value="s3">S3</option>
                 </select>
-                {errors.pendIbu?.type === "required" && (
+                {errors.pend_ibu?.type === "required" && (
                   <small className="text-danger">
                     {" "}
-                    {errors.pendIbu.message}
+                    {errors.pend_ibu.message}
                   </small>
                 )}
               </div>
               <div className="mb-3">
                 <label htmlFor="pek-ibu" className="text-black form-label">
                   Pekerjaan
+                  <span className="text-danger">*</span>
                 </label>
                 <select
                   name="pek-ibu"
                   id="pek-ibu"
-                  className={`form-select ${errors.namaIbu && "is-invalid"}`}
-                  {...register("pekIbu", {
+                  className={`form-select ${errors.pek_ibu && "is-invalid"}`}
+                  {...register("pek_ibu", {
                     required: "Pkerjaan Ibu Wajib di Isi",
                   })}
                 >
@@ -600,10 +648,10 @@ export default function FormPendaftaran() {
                   <option value="Pensiunan">Pensiunan</option>
                   <option value="Lainnya">Lainnya</option>
                 </select>
-                {errors.pekIbu?.type === "required" && (
+                {errors.pek_ibu?.type === "required" && (
                   <small className="text-danger">
                     {" "}
-                    {errors.pekIbu.message}
+                    {errors.pek_ibu.message}
                   </small>
                 )}
               </div>
@@ -611,7 +659,12 @@ export default function FormPendaftaran() {
                 <label htmlFor="peng-ibu" className="text-black form-label">
                   Penghasilan Bulanan
                 </label>
-                <select name="peng-ibu" id="peng-ibu" className="form-select">
+                <select
+                  name="peng-ibu"
+                  id="peng-ibu"
+                  className="form-select"
+                  {...register("peng_ibu")}
+                >
                   <option value={""}>Pilih Penghasilan Bulanan</option>
                   <option value="kurang dari 500.000">
                     {" "}
@@ -629,6 +682,7 @@ export default function FormPendaftaran() {
                 name="disabilitas-ibu"
                 type="text"
                 mb="3"
+                {...register("disabilitas_ibu")}
               />
             </fieldset>
             <fieldset className="rounded shadow mb-3">
