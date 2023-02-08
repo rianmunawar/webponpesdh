@@ -15,7 +15,7 @@ export default function Fasilitas() {
                   <IconYellowList />
                 </span>
               </h2>
-              <p>
+              <p className="text-black">
                 Pembelajaran yang inteaktif dan berkualitas didukung dengan
                 fasilitas yang lengkap
               </p>

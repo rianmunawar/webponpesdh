@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/navigation";
 import KontakForm from "../../components/organisms/KontakForm";
+import CtaBtn from "../../components/atoms/CtaBtn/CtaBtn";
 
 const Ppdb = () => {
   return (
@@ -22,18 +23,46 @@ const Ppdb = () => {
         <WhyUs />
         <section className="mb-100" id="informasi">
           <div className="container">
-            <div className="informasi-wrapper py-5">
-              <div className="informasi-text-wrapper">
+            <div className="informasi-wrapper py-5 mb-50">
+              <div className="informasi-text-wrapper mb-5">
                 <h2 className="section__title">Informasi PPDB</h2>
                 <p>
                   Telah dibuka{" "}
                   <strong className="text-black">
-                    PPDB Yayasan Darul Hikmah TA. 2023/2024
+                    PPDB Ponpes Darul Hikmah TA. 2023/2024
                   </strong>{" "}
                   semua jenjang
                 </p>
+                <div className="persyaratan">
+                  <h3>Pesyaratan PPDB</h3>
+                  <ol>
+                    <li className="text-black">
+                      Pas photo (3x4) background merah 3 lembar
+                    </li>
+                    <li className="text-black">
+                      Surat keterangan lulus asli (bagi pendaftar jenjang MTs
+                      dan MAK)
+                    </li>
+                    <li className="text-black">
+                      Surat keterangan kelakuan baik dari sekolah asal (bagi
+                      pendaftar jenjang MTs dan MAK)
+                    </li>
+                    <li className="text-black">
+                      Photo copy Ijazah 2 lembar legalisir (bagi pendaftar
+                      jenjang MTs dan MAK)
+                    </li>
+                    <li className="text-black">
+                      Photo copy SKHUN 2 lembar legalisir (bagi pendaftar
+                      jenjang MTs dan MAK)
+                    </li>
+                    <li className="text-black">Photo copy NISN 2 lembar</li>
+                    <li className="text-black">
+                      Photo copy KK dan akta kelahiran
+                    </li>
+                  </ol>
+                </div>
               </div>
-              <div className="informasi-banner-wrapper mt-5">
+              <div className="informasi-banner-wrapper mb-5">
                 <Swiper
                   modules={[EffectFlip, Navigation]}
                   navigation
@@ -46,6 +75,14 @@ const Ppdb = () => {
                   <div className="swiper-pagination"></div>
                 </Swiper>
               </div>
+            </div>
+            <div className="cta-wrapper d-flex justify-content-center">
+              <CtaBtn
+                className="d-block"
+                classChild="e-btn"
+                label="Daftar Sekarang"
+                link="/ppdb/formulir-pendaftaran"
+              />
             </div>
           </div>
         </section>
