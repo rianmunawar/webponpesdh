@@ -1,17 +1,10 @@
 import React from "react";
 // Import Swiper React components
-import {
-  Pagination,
-  EffectCreative,
-  EffectCube,
-  EffectCoverflow,
-} from "swiper";
+import { Pagination, EffectCoverflow } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-creative";
-import "swiper/css/effect-cube";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
@@ -29,7 +22,7 @@ export default function WhyUs() {
             </h1>
           </div>
           <Swiper
-            modules={[Pagination, EffectCreative, EffectCube, EffectCoverflow]}
+            modules={[Pagination, EffectCoverflow]}
             effect="coverflow"
             slidesPerView={1}
             pagination={{

@@ -1,0 +1,21 @@
+.swiper {
+  height: 75vh;
+}
+.swiper .swiper-slide img {
+  height: 100%;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+}
+
+.pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 5px;
+  display: inline-block;
+  border-radius: 4px;
+}

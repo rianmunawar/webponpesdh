@@ -3,17 +3,15 @@ const { User } = require("../models");
 const response = require("../response");
 
 const createUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, isAdmin } = req.body;
   const salt = process.env.SALT_ROUND;
   await bcrypt.hash(password, parseInt(salt)).then(async (hash) => {
-    await User.create(
-      {
-        name: name,
-        email: email,
-        password: hash,
-      },
-      { fields: ["name", "email", "password"] }
-    )
+    await User.create({
+      name: name,
+      email: email,
+      password: hash,
+      isAdmin: isAdmin,
+    })
       .then((users) => {
         const user = {
           id: users.id,

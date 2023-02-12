@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Admin from "../pages/Admin";
 import Beranda from "../pages/Beranda";
 import BeritaPage from "../pages/BeritaPage";
 import KontakPage from "../pages/KontakPage";
@@ -19,6 +20,7 @@ function Routers() {
       <Route path="/mak" element={<Mak />} />
       <Route path="/ppdb" element={<Ppdb />} />
       <Route path="/ppdb/formulir-pendaftaran" element={<Pendaftaran />} />
+      <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

@@ -367,6 +367,10 @@ p {
   margin-bottom: -120px;
 }
 
+.mb-20 {
+  margin-bottom: 200px;
+}
+
 .mb--100 {
   margin-bottom: -100px;
 }
@@ -379,7 +383,7 @@ p {
   margin-top: -80px;
 }
 
-.mb-130 {
+.mb--130 {
   margin-bottom: -130px;
 }
 
@@ -1104,8 +1108,9 @@ p {
 /*----------------------------------------*/
 /*  PROGRAM CTA CSS START
 /*----------------------------------------*/
-#carouselBanner .carousel-inner .carousel-item {
-  z-index: -1;
+.swiper-slide {
+  margin-top: 0;
+  padding: 0;
 }
 
 .program__area {
@@ -1113,6 +1118,8 @@ p {
 }
 
 .program__inner {
+  position: absolute;
+  z-index: 3;
   padding: 20px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -6738,6 +6745,9 @@ p.checkout-coupon input[type="text"]:focus {
 /*----------------------------------------*/
 /*  23. ERROR CSS START
 /*----------------------------------------*/
+.error__area {
+  height: 100vh;
+}
 .error__title {
   font-size: 70px;
   line-height: 0.9;
@@ -6750,13 +6760,16 @@ p.checkout-coupon input[type="text"]:focus {
 }
 @media (max-width: 575px) {
   .error__title {
-    font-size: 37px;
+    font-size: 27px;
   }
 }
 .error__content p {
-  font-size: 20px;
+  font-size: 16px;
   color: #53545b;
   margin-bottom: 45px;
+}
+.error__thumb img {
+  width: 255px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .error__thumb img {
@@ -6765,7 +6778,7 @@ p.checkout-coupon input[type="text"]:focus {
 }
 @media (max-width: 575px) {
   .error__thumb img {
-    width: 100%;
+    width: 170px;
   }
 }
 

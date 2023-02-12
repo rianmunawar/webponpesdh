@@ -32,15 +32,17 @@ export default function FormPendaftaran() {
 
   return (
     <>
-      <section className="form__area mb-100 mt-4" id="form">
+      <section className="form__area py-5 px-1 px-md-5 grey-bg" id="form">
         <div className="container">
           <ToastContainer />
           <div className="text-wrapper text-center">
             <h2 className="section__title mb-3">Formulir Pendaptaran</h2>
-            <h4 className="mb-3">PPDB Ponpes Darul Hikmah 2023/2024</h4>
+            <h4 className="mb-3 text-desc">
+              PPDB Ponpes Darul Hikmah 2023/2024
+            </h4>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)} className="p-5">
-            <fieldset className="rounded shadow mb-3">
+          <form onSubmit={handleSubmit(onSubmit)} className="p-0 p-md-5">
+            <fieldset className="rounded shadow">
               <legend className="text-black fw-bold mb-4">Data Diri</legend>
               <div className="mb-3">
                 <label htmlFor="jenjang" className="form-label text-black">
@@ -335,7 +337,7 @@ export default function FormPendaftaran() {
             {jenjang === "ra" || jenjang === undefined ? (
               ""
             ) : (
-              <fieldset className="rounded shadow mb-3">
+              <fieldset className="rounded shadow">
                 <legend className="text-black fw-bold mb-3">
                   Data Asal Sekolah
                 </legend>
@@ -368,7 +370,7 @@ export default function FormPendaftaran() {
               </fieldset>
             )}
 
-            <fieldset className="rounded shadow mb-3">
+            <fieldset className="rounded shadow">
               <legend className="text-black fw-bold mb-3">
                 Data Orang Tua
               </legend>
@@ -685,7 +687,7 @@ export default function FormPendaftaran() {
                 {...register("disabilitas_ibu")}
               />
             </fieldset>
-            <fieldset className="rounded shadow mb-3">
+            <fieldset className="rounded shadow">
               <button type="submit" className="btn btn-primary">
                 Daftar
               </button>

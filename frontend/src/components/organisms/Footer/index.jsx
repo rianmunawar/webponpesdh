@@ -136,8 +136,8 @@ const Footer = () => {
               <div className="col-xxl-12">
                 <div className="footer__copyright text-center">
                   <p>
-                    © 2022 Ponpes Darul Hikmah | All Rights Reserved | Develope
-                    By &nbsp;
+                    © {new Date().getFullYear()} Ponpes Darul Hikmah | All
+                    Rights Reserved | Develope By &nbsp;
                     <a
                       href="https://www.instagram.com/rianmunawar13/"
                       target={"_blank"}

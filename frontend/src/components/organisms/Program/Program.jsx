@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Program = () => {
   return (
     <section className="program__area">
-      <div className="container pt-20 gray-bg">
+      <div className="container pt-20 gray-bg position-relative mb-200">
         <div className="program__inner white-bg">
           <div className="row">
             <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
               <div className="program__item mb-30 transition-3 d-flex align-items-center">
                 <div className="program__icon mr-30">
-                  {/*?xml version="1.0"?*/}{' '}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

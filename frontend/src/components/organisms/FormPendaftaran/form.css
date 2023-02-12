@@ -1,10 +1,29 @@
 fieldset {
-  border: 1px solid #00113a !important;
   padding: 32px !important;
+  background-color: #fff;
+  margin-bottom: 40px !important;
 }
 
 @media (max-width: 375px) {
   fieldset {
     padding: 20px;
+  }
+  h2.section__title.mb-3 {
+    font-size: 1.2rem;
+  }
+  h4.text-desc {
+    font-size: 0.8rem;
+  }
+  .text-wrapper {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  h2.section__title.mb-3 {
+    font-size: 1.8rem;
+  }
+  h4.text-desc {
+    font-size: 1rem;
   }
 }
