@@ -20,7 +20,7 @@ const Beranda = () => {
         <Berita />
         <Gallery />
         <Fasilitas />
-        <CtaBanner />
+        <CtaBanner textLink="informasi" link="/ppdb" />
       </Layouts>
     </>
   );

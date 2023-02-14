@@ -14,14 +14,10 @@ module.exports = (sequelize, DataTypes) => {
   }
   User.init(
     {
-      id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV1,
-        primaryKey: true,
+      uuid: {
+        type: DataTypes.STRING,
+        defaultValue: DataTypes.UUIDV4,
         allowNull: false,
-        validate: {
-          isUUID: 1,
-        },
       },
       name: {
         type: DataTypes.STRING,
@@ -32,9 +28,9 @@ module.exports = (sequelize, DataTypes) => {
       password: {
         type: DataTypes.STRING,
       },
-      isAdmin: {
-        type: DataTypes.ENUM("true", "false"),
-        defaultValue: "false",
+      role: {
+        type: DataTypes.STRING,
+        defaultValue: "user",
       },
     },
     {

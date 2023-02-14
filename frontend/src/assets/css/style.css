@@ -57,6 +57,7 @@ body {
   font-weight: normal;
   color: #6d6e75;
   line-height: 26px;
+  background: #f3f4f8;
 }
 
 a {
@@ -387,6 +388,10 @@ p {
   margin-bottom: -130px;
 }
 
+.w-40 {
+  width: 40%;
+}
+
 .section-padding {
   padding-left: 50px;
   padding-right: 50px;
@@ -431,7 +436,7 @@ p {
   text-align: center;
   padding: 0 25px;
   color: #ffffff;
-  background: #2b4eff;
+  background: #0cae74;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -440,9 +445,9 @@ p {
 }
 .e-btn:hover {
   color: #ffffff;
-  -webkit-box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
-  -moz-box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
-  box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(4, 118, 61, 0.3);
+  -moz-box-shadow: 0px 10px 24px 0px rgba(4, 118, 61, 0.3);
+  box-shadow: 0px 10px 24px 0px rgba(4, 118, 61, 0.3);
 }
 .e-btn-2 {
   height: 34px;
@@ -671,7 +676,7 @@ p {
 .section__sub-title {
   font-size: 18px;
   font-weight: 500;
-  color: #2b4eff;
+  color: #0cae74;
   display: inline-block;
   margin-bottom: 5px;
 }
@@ -1104,116 +1109,6 @@ p {
   -o-transform: rotate(45deg);
   color: #0e1133;
 }
-
-/*----------------------------------------*/
-/*  PROGRAM CTA CSS START
-/*----------------------------------------*/
-.swiper-slide {
-  margin-top: 0;
-  padding: 0;
-}
-
-.program__area {
-  margin-top: -40px;
-}
-
-.program__inner {
-  position: absolute;
-  z-index: 3;
-  padding: 20px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 30px 60px 0px rgba(0, 4, 48, 0.3);
-  -moz-box-shadow: 0px 30px 60px 0px rgba(0, 4, 48, 0.3);
-  box-shadow: 0px 30px 60px 0px rgba(0, 4, 48, 0.3);
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .program__area {
-    margin-top: 30px;
-  }
-
-  #carouselBanner .carousel-inner .carousel-item img {
-    height: 325px;
-  }
-}
-@media (max-width: 575px) {
-  .program__area {
-    margin-top: 30px;
-  }
-
-  #carouselBanner .carousel-inner .carousel-item img {
-    height: 325px;
-  }
-}
-
-.program__item {
-  padding: 20px 40px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  border: 2px solid #eef0f6;
-  background: #fff;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .program__item {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .program__item {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media (max-width: 575px) {
-  .program__item {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-.program__item:hover {
-  border-color: #2b4eff;
-  background: #2b4eff;
-  -webkit-box-shadow: 0px 20px 30px 0px rgba(4, 23, 118, 0.3);
-  -moz-box-shadow: 0px 20px 30px 0px rgba(4, 23, 118, 0.3);
-  box-shadow: 0px 20px 30px 0px rgba(4, 23, 118, 0.3);
-}
-.program__content .program__title {
-  font-size: 18px;
-}
-.program__item:hover .program__content .program__title {
-  color: #ffffff;
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .program__icon {
-    margin-right: 15px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .program__icon {
-    margin-right: 15px;
-  }
-}
-.program__icon svg {
-  width: 40px;
-  height: 40px;
-}
-.program__item:hover .program__icon svg {
-  fill: #fff;
-}
-.program__title {
-  font-size: 20px;
-  line-height: 1;
-  margin-bottom: 0;
-}
-
-/*----------------------------------------*/
-/*  PROGRAM CSS END
-/*----------------------------------------*/
 
 /*----------------------------------------*/
 /*  04. CATEGORY CSS START
@@ -4638,6 +4533,12 @@ p.checkout-coupon input[type="text"]:focus {
   width: 100%;
   height: 370px;
 }
+.why__thumb img.main-thumb {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .why__thumb {
     margin-top: 50px;
@@ -4706,6 +4607,7 @@ p.checkout-coupon input[type="text"]:focus {
   position: absolute;
   right: 10%;
   bottom: 6%;
+  z-index: 2;
 }
 @media (max-width: 575px) {
   .why__thumb img.why-dot {
@@ -6416,7 +6318,6 @@ p.checkout-coupon input[type="text"]:focus {
   height: 56px;
   line-height: 54px;
   padding: 0 23px;
-  background: #f3f4f8;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -7354,6 +7255,9 @@ p.checkout-coupon input[type="text"]:focus {
 }
 .footer__widget-body-2 p {
   color: #53545b;
+}
+.footer__logo a img {
+  width: 100%;
 }
 .footer__social ul li {
   display: inline-block;

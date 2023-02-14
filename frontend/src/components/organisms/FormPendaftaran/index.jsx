@@ -36,7 +36,7 @@ export default function FormPendaftaran() {
         <div className="container">
           <ToastContainer />
           <div className="text-wrapper text-center">
-            <h2 className="section__title mb-3">Formulir Pendaptaran</h2>
+            <h2 className="section__title mb-3">Formulir Pendaftaran</h2>
             <h4 className="mb-3 text-desc">
               PPDB Ponpes Darul Hikmah 2023/2024
             </h4>

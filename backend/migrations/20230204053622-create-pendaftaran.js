@@ -6,13 +6,15 @@ module.exports = {
       "Pendaftaran",
       {
         id: {
-          type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV1,
-          allowNull: false,
+          type: Sequelize.INTEGER,
+          autoIncrement: true,
           primaryKey: true,
-          validate: {
-            isUUID: 1,
-          },
+          allowNull: false,
+        },
+        uuid: {
+          type: Sequelize.STRING,
+          defaultValue: Sequelize.UUIDV4,
+          allowNull: false,
         },
         nama: {
           type: Sequelize.STRING,

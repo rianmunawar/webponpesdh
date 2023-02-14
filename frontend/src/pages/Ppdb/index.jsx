@@ -2,6 +2,7 @@ import React from "react";
 import HeroPpdb from "../../components/organisms/HeroPpdb";
 import WhyUs from "../../components/organisms/WhyUs";
 import Fasilitas from "../../components/organisms/Fasilitas";
+import CtaBanner from "../../components/organisms/CtaBanner";
 import Layouts from "../../Layout";
 import { Lembaga } from "../../components/organisms/Lembaga";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -87,7 +88,7 @@ const Ppdb = () => {
           </div>
         </section>
         <Fasilitas />
-        <section className="kontak__area" id="kontak">
+        <section className="kontak__area mb-5" id="kontak">
           <div className="container">
             <div className="kontak-text-wrapper">
               <h2 className="section__title">Kontak</h2>
@@ -98,6 +99,7 @@ const Ppdb = () => {
             <KontakForm />
           </div>
         </section>
+        <CtaBanner textLink="DAFTAR" link="/ppdb/formulir-pendaftaran" />
       </Layouts>
     </>
   );

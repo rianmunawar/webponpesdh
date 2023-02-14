@@ -1,0 +1,132 @@
+.greating-thumb {
+  position: relative;
+  z-index: 1;
+  margin-left: -35px;
+}
+
+.greating-thumb iframe {
+  width: 100%;
+  height: 370px;
+}
+.greating-thumb img.main-thumb {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .greating-thumb {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .greating-thumb {
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .greating-thumb {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .greating-thumb img {
+    width: 100%;
+  }
+}
+.greating-thumb img.greating-green {
+  position: absolute;
+  z-index: 1;
+  bottom: -10%;
+  left: 4%;
+  width: 90%;
+  height: 40%;
+  animation: leftright 8s ease-in-out infinite alternate-reverse;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .greating-thumb img.greating-green {
+    right: -23px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .greating-thumb img.greating-green {
+    right: -19px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .greating-thumb img.greating-green {
+    right: -19px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .greating-thumb img.greating-green {
+    right: 41px;
+  }
+}
+@media (max-width: 575px) {
+  .greating-thumb img.greating-green {
+    right: 0px;
+    width: 100%;
+  }
+}
+.greating-thumb img.greating-pink {
+  position: absolute;
+  z-index: -2;
+  bottom: -6%;
+  left: 15%;
+  animation: leftright 8s ease-in-out infinite alternate-reverse;
+}
+@keyframes leftright {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: -5deg;
+  }
+  100% {
+    rotate: 5deg;
+  }
+}
+@media (max-width: 575px) {
+  .greating-thumb img.greating-pink {
+    width: 80%;
+  }
+}
+.greating-thumb img.greating-dot {
+  position: absolute;
+  right: 10%;
+  bottom: 6%;
+  z-index: 2;
+}
+@media (max-width: 575px) {
+  .greating-thumb img.greating-dot {
+    width: inherit;
+  }
+}
+.greating-thumb img.greating-line {
+  position: absolute;
+  right: 0%;
+  top: 28%;
+}
+@media (max-width: 575px) {
+  .greating-thumb img.greating-line {
+    width: inherit;
+  }
+}
+.greating__btn .link-btn {
+  color: #0e1133;
+}
+.greating__btn .link-btn:hover {
+  color: #2b4eff;
+}
+@media (max-width: 575px) {
+  .greating__content {
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .greating__content p {
+    width: 648px;
+  }
+}

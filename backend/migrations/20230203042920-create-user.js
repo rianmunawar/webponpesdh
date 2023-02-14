@@ -6,13 +6,15 @@ module.exports = {
       "User",
       {
         id: {
-          type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV1,
-          allowNull: false,
+          type: Sequelize.INTEGER,
+          autoIncrement: true,
           primaryKey: true,
-          validate: {
-            isUUID: 1,
-          },
+          allowNull: false,
+        },
+        uuid: {
+          type: Sequelize.STRING,
+          defaultValue: Sequelize.UUIDV4,
+          allowNull: false,
         },
         name: {
           type: Sequelize.STRING(65),
@@ -23,9 +25,9 @@ module.exports = {
         password: {
           type: Sequelize.STRING,
         },
-        isAdmin: {
-          type: Sequelize.ENUM("true", "false"),
-          defaultValue: "false",
+        role: {
+          type: Sequelize.STRING,
+          defaultValue: "user",
         },
         createdAt: {
           type: "TIMESTAMP",

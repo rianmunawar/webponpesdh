@@ -3,18 +3,18 @@ const { User } = require("../models");
 const response = require("../response");
 
 const createUser = async (req, res) => {
-  const { name, email, password, isAdmin } = req.body;
+  const { name, email, password, role } = req.body;
   const salt = process.env.SALT_ROUND;
   await bcrypt.hash(password, parseInt(salt)).then(async (hash) => {
     await User.create({
       name: name,
       email: email,
       password: hash,
-      isAdmin: isAdmin,
+      role: role,
     })
       .then((users) => {
         const user = {
-          id: users.id,
+          uuid: users.uuid,
           name: users.name,
           email: users.email,
         };
@@ -29,7 +29,7 @@ const createUser = async (req, res) => {
 const getAllUser = async (req, res) => {
   try {
     const data = await User.findAll({
-      attributes: ["id", "name", "email"],
+      attributes: ["uuid", "name", "email"],
     });
     response(200, data, "Menampilkan Semua Data User", res);
   } catch (err) {

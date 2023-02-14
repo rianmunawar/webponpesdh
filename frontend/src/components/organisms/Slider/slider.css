@@ -1,5 +1,9 @@
 .swiper {
-  height: 75vh;
+  height: 80vh;
+}
+.swiper-slide {
+  margin-top: 0 !important;
+  padding: 0 !important;
 }
 .swiper .swiper-slide img {
   height: 100%;

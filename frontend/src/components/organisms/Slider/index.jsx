@@ -17,6 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./slider.css";
 import imgSlider from "../../../assets/img/slider/slider-1.jpg";
+import banner1 from "../../../assets/img/banner-1.png";
 
 const Slider = () => {
   return (
@@ -43,47 +44,21 @@ const Slider = () => {
         }}
         effect="coverflow"
         slidesPerView={1}
-        // className="carousel-inner"
       >
-        {/* <SwiperSlide className="carousel-item d-block">
-          <img src={imgSlider} alt="image" />
+        <SwiperSlide>
+          <img src={banner1} alt="image" className="w-100" />
         </SwiperSlide>
-        <SwiperSlide className="carousel-item d-block">
-          <img src={imgSlider1} alt="image" />
+        {/* <SwiperSlide>
+          <img src={imgSlider} alt="image" className="w-100" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={imgSlider} alt="image" className="w-100" />
         </SwiperSlide> */}
-        <SwiperSlide>
-          <img src={imgSlider} alt="image" className="w-100" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={imgSlider} alt="image" className="w-100" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={imgSlider} alt="image" className="w-100" />
-        </SwiperSlide>
         <div className={styles["swiper-pagination"]}></div>
         <div className="pagination"></div>
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
       </Swiper>
-      {/* <Carousel className="carousel-inner overflow-hidden">
-        <Carousel.Item interval={3000} className="carousel-item">
-          <img className="d-block w-100" src={imgSlider} alt="First slide" />
-        </Carousel.Item>
-        <Carousel.Item interval={3000} className="carousel-item">
-          <img
-            className="d-block w-100"
-            src="https://picsum.photos/id/699/1000/328"
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={3000} className="carousel-item">
-          <img
-            className="d-block w-100"
-            src="https://picsum.photos/id/699/1000/328"
-            alt="First slide"
-          />
-        </Carousel.Item>
-      </Carousel> */}
     </section>
   );
 };

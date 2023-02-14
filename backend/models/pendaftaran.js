@@ -13,14 +13,10 @@ module.exports = (sequelize, DataTypes) => {
   }
   Pendaftaran.init(
     {
-      id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV1,
-        primaryKey: true,
+      uuid: {
+        type: DataTypes.STRING,
+        defaultValue: DataTypes.UUIDV4,
         allowNull: false,
-        validate: {
-          isUUID: 1,
-        },
       },
       nama: DataTypes.STRING,
       jenjang: DataTypes.STRING,

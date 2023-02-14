@@ -1,11 +1,11 @@
 import React from "react";
 import shapeCta from "../../../assets/img/cta/cta-shape.png";
 
-const CtaBanner = () => {
+const CtaBanner = (props) => {
   return (
     <section className="cta__area mb--120">
       <div className="container">
-        <div className="cta__inner blue-bg fix">
+        <div className="cta__inner green-bg fix">
           <div className="cta__shape">
             <img src={shapeCta} alt={"shape-cta"} />
           </div>
@@ -19,8 +19,8 @@ const CtaBanner = () => {
             </div>
             <div className="col-xxl-5 col-xl-5 col-lg-4 col-md-4">
               <div className="cta__more d-md-flex justify-content-end p-relative z-index-1">
-                <a href="/ppdb" className="e-btn e-btn-white">
-                  Informasi
+                <a href={props.link} className="e-btn e-btn-white">
+                  {props.textLink}
                 </a>
               </div>
             </div>

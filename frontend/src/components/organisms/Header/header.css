@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --bg-blue: #2b4eff;
+  --bg-green: #0cae74;
   --black-color: #0e1133;
 }
 
@@ -11,27 +11,58 @@ body {
   font-weight: normal;
   color: #6d6e75;
   line-height: 26px;
+  background: #f3f4f8;
 }
 
 .navbar {
   height: 100px;
 }
 
-.navbar .navlink {
+.navbar .navbar-brand a img {
+  width: 65%;
+}
+
+@media (max-width: 1024px) {
+  .navbar .navbar-brand a img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 835px) {
+  .navbar .navbar-brand {
+    width: 40% !important;
+  }
+  .navbar .navbar-brand a img {
+    width: 100%;
+  }
+  .nav-link a {
+    font-size: 14px;
+  }
+  .dropdown a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 525px) {
+  .navbar .navbar-brand {
+    width: 70% !important;
+  }
+}
+
+.navbar .nav-link {
   color: var(--black-color);
   font-weight: 600;
 }
 
-.navbar .navlink .active {
-  color: var(--bg-blue) !important;
+.navbar .nav-link .active {
+  color: var(--bg-green) !important;
 }
 
 .navbar-nav .active {
-  color: var(--bg-blue) !important;
+  color: var(--bg-green) !important;
 }
 
-.navbar .navlink:hover {
-  color: var(--bg-blue) !important;
+.navbar .nav-link:hover {
+  color: var(--bg-green) !important;
 }
 
 .dropdown a {
@@ -40,9 +71,9 @@ body {
 }
 
 .dropdown a:hover {
-  color: var(--bg-blue) !important;
+  color: var(--bg-green) !important;
 }
 
 .dropdown a.show {
-  color: var(--bg-blue) !important;
+  color: var(--bg-green) !important;
 }

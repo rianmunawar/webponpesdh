@@ -1,0 +1,26 @@
+.program__area {
+  margin-top: -40px;
+}
+
+.program__inner {
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 30px 60px 0px rgba(0, 4, 48, 0.3);
+  -moz-box-shadow: 0px 30px 60px 0px rgba(0, 4, 48, 0.3);
+  box-shadow: 0px 30px 60px 0px rgba(0, 4, 48, 0.3);
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .program__area {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .program__area {
+    margin-top: 30px;
+  }
+}

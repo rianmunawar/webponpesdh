@@ -1,12 +1,17 @@
 const { Pendaftaran } = require("../models");
 const Validator = require("fastest-validator");
 const response = require("../response");
+const { where } = require("sequelize");
 
 const v = new Validator();
 // Get all data pendaftaran
 const getAllPendaftaran = async (req, res) => {
   try {
-    const pendaftaran = await Pendaftaran.findAll();
+    const pendaftaran = await Pendaftaran.findAll({
+      attributes: {
+        exclude: ["id"],
+      },
+    });
     response(200, pendaftaran, "get all data successfuly", res);
   } catch (err) {
     response(500, err.message, "internal server error", res);
@@ -16,7 +21,14 @@ const getAllPendaftaran = async (req, res) => {
 const getPendaftaranById = async (req, res) => {
   try {
     const id = req.params.id;
-    const pendaftaran = await Pendaftaran.findByPk(id);
+    const pendaftaran = await Pendaftaran.findOne({
+      attributes: {
+        exclude: ["id"],
+      },
+      where: {
+        uuid: id,
+      },
+    });
     response(200, pendaftaran, "get data by id successfuly", res);
   } catch (err) {
     response(500, err.message, "internal server error", res);
@@ -58,8 +70,42 @@ const createDataPendaftaran = async (req, res) => {
     };
     const validate = v.validate(req.body, schema);
     if (!validate) response(400, validate, "bad request", res);
-    const dataPendaftar = await Pendaftaran.create(req.body);
-    response(200, dataPendaftar, "Daftar berhasil", res);
+    await Pendaftaran.create(req.body)
+      .then((data) => {
+        const responseData = ({
+          uuid,
+          nama,
+          jenjang,
+          nisn,
+          nik,
+          tempat_lahir,
+          dob,
+          j_kelamin,
+          alamat,
+          agama,
+          kewarganegaraan,
+          email,
+          no_hp,
+          asal_sekolah,
+          no_ijazah,
+          nama_ayah,
+          nik_ayah,
+          dob_ayah,
+          pend_ayah,
+          pek_ayah,
+          peng_ayah,
+          disabilitas_ayah,
+          nama_ibu,
+          nik_ibu,
+          dob_ibu,
+          pend_ibu,
+          pek_ibu,
+          peng_ibu,
+          disabilitas_ibu,
+        } = data);
+        response(200, responseData, "Selamat anda behasil daftar", res);
+      })
+      .catch((error) => response(400, error, "Bad request", res));
   } catch (error) {
     response(500, error, error.message, res);
   }

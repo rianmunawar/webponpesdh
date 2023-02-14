@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 
 const Berita = () => {
   return (
-    <section className="course__area pt-115 pb-120 grey-bg mt-100">
+    <section className="course__area pt-115 pb-120 white-bg mt-100">
       <div className="container">
         <div className="row align-items-end">
           <div className="col-xxl-5 col-xl-6 col-lg-6">

@@ -5,15 +5,16 @@ import shapeGreen from "../../../assets/img/why/why-shape-green.png";
 import shapePink from "../../../assets/img/why/why-shape-pink.png";
 import shapeDot from "../../../assets/img/why/why-shape-dot.png";
 import shapeLine from "../../../assets/img/why/why-shape-line.png";
-import img from "../../../assets/img/why/why.png";
+import img from "../../../assets/img/bapak.png";
+import Styles from "./Greating.module.css";
 
 const Greating = () => {
   return (
-    <section className="why__area pt-100">
+    <section className={`${Styles["greating-area"]} mb-100 py-5`}>
       <div className="container">
         <div className="row align-items-center">
           <div className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">
-            <div className="why__content pr-50 mt-40">
+            <div className={`${Styles["greating__content"]} pr-50 mt-40`}>
               <div className="section__title-wrapper mb-30">
                 <span className="section__sub-title">
                   Ketua YPI Darul Hikmah
@@ -43,7 +44,7 @@ const Greating = () => {
                   cum?
                 </p>
               </div>
-              <div className="why__btn">
+              <div className="greating__btn">
                 <Link to="/detail-berita/2" className="link-btn">
                   Selanjutnya
                   <i className="far fa-arrow-right" />
@@ -53,12 +54,32 @@ const Greating = () => {
             </div>
           </div>
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
-            <div className="why__thumb">
-              <img src={img} alt={`ketua yayasan`} />
-              <img className="why-green" src={shapeGreen} alt={"element"} />
-              <img className="why-pink" src={shapePink} alt={"element"} />
-              <img className="why-dot" src={shapeDot} alt={"element"} />
-              <img className="why-line" src={shapeLine} alt={"element"} />
+            <div className={Styles["greating-thumb"]}>
+              <img
+                src={img}
+                alt={`ketua yayasan`}
+                className={Styles["main-thumb"]}
+              />
+              <img
+                className={Styles["greating-green"]}
+                src={shapeGreen}
+                alt={"element"}
+              />
+              <img
+                className={Styles["greating-pink"]}
+                src={shapePink}
+                alt={"element"}
+              />
+              <img
+                className={Styles["greating-dot"]}
+                src={shapeDot}
+                alt={"element"}
+              />
+              <img
+                className={Styles["greating-line"]}
+                src={shapeLine}
+                alt={"element"}
+              />
             </div>
           </div>
         </div>

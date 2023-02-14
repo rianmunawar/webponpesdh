@@ -11,19 +11,19 @@ module.exports = {
           name: "admin",
           email: "makdhiproject@gmail.com",
           password: await bcrypt.hash("admin123", 10),
-          isAdmin: "true",
+          role: "admin",
         },
         {
           name: "John Doe",
           email: "jhon@gmail.com",
           password: await bcrypt.hash("jhon123", 10),
-          isAdmin: "false",
+          role: "user",
         },
         {
           name: "Dion die",
           email: "dion@gmail.com",
           password: await bcrypt.hash("dion123", 10),
-          isAdmin: "false",
+          role: "user",
         },
       ],
       {}
