@@ -13,7 +13,10 @@ const Greating = () => {
     <section className={`${Styles["greating-area"]} mb-100 py-5`}>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">
+          <div
+            className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8"
+            data-aos="fade-right"
+          >
             <div className={`${Styles["greating__content"]} pr-50 mt-40`}>
               <div className="section__title-wrapper mb-30">
                 <span className="section__sub-title">
@@ -53,7 +56,10 @@ const Greating = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
+          <div
+            className="col-xxl-5 col-xl-5 col-lg-6 col-md-8"
+            data-aos="zoom-in"
+          >
             <div className={Styles["greating-thumb"]}>
               <img
                 src={img}

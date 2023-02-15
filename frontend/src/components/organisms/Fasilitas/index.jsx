@@ -22,7 +22,11 @@ export default function Fasilitas() {
             </div>
           </div>
           <div className="row justify-content-center g-2">
-            <div className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div
+              className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
               <div className="image-gallery">
                 <img src="https://unsplash.it/1200/768.jpg?image=271" alt="" />
               </div>
@@ -32,7 +36,11 @@ export default function Fasilitas() {
                 </div>
               </div>
             </div>
-            <div className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div
+              className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <div className="image-gallery">
                 <img src="https://unsplash.it/1200/768.jpg?image=271" alt="" />
               </div>
@@ -42,7 +50,11 @@ export default function Fasilitas() {
                 </div>
               </div>
             </div>
-            <div className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div
+              className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
               <div className="image-gallery">
                 <img src="https://unsplash.it/1200/768.jpg?image=271" alt="" />
               </div>
@@ -52,7 +64,11 @@ export default function Fasilitas() {
                 </div>
               </div>
             </div>
-            <div className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div
+              className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
               <div className="image-gallery">
                 <img src="https://unsplash.it/1200/768.jpg?image=271" alt="" />
               </div>

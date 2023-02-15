@@ -19,10 +19,7 @@ const Berita = () => {
                 <br />
                 terbaru
               </h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                molestiae?
-              </p>
+              <p>Berita dan informasi terbaru untuk kamu</p>
             </div>
           </div>
           <div className="col-xxl-7 col-xl-6 col-lg-6">
@@ -38,7 +35,11 @@ const Berita = () => {
           </div>
         </div>
         <div className="row grid">
-          <div className="col-12 col-md-4">
+          <div
+            className="col-12 col-md-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <Card
               title="Maulid Nabi Muhammad SAW"
               linkTarget="/detail"
@@ -49,7 +50,11 @@ const Berita = () => {
               updatedAt="Juni, 12 2022"
             />
           </div>
-          <div className="col-12 col-md-4">
+          <div
+            className="col-12 col-md-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <Card
               title="Maulid Nabi Muhammad SAW"
               linkTarget="/detail"
@@ -60,7 +65,11 @@ const Berita = () => {
               updatedAt="Juni, 12 2022"
             />
           </div>
-          <div className="col-12 col-md-4">
+          <div
+            className="col-12 col-md-4"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <Card
               title="Maulid Nabi Muhammad SAW"
               linkTarget="/detail"

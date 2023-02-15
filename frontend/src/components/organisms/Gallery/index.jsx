@@ -48,24 +48,32 @@ const Gallery = () => {
             alt="gambar"
             onClick={handleShow}
             className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
           />
           <img
             src="https://unsplash.it/1200/768.jpg?image=253"
             alt="gambar"
             onClick={handleShow}
             className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
           />
           <img
             src="https://unsplash.it/1200/768.jpg?image=254"
             alt="gambar"
             onClick={handleShow}
             className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
           />
           <img
             src="https://unsplash.it/1200/768.jpg?image=259"
             alt="gambar"
             onClick={handleShow}
             className="image-gallery col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 h-100"
+            data-aos="fade-up"
+            data-aos-delay="500"
           />
         </div>
       </div>

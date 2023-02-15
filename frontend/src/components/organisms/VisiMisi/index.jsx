@@ -4,7 +4,7 @@ const VisiMisi = () => {
   return (
     <section className="visimisi__area mt-100 grey-bg py-5">
       <div className="container">
-        <div className="visi__area">
+        <div className="visi__area" data-aos="fade-up">
           <h2 className="section__title">Visi</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nemo
@@ -16,7 +16,7 @@ const VisiMisi = () => {
             praesentium!
           </p>
         </div>
-        <div className="misi__area">
+        <div className="misi__area" data-aos="fade-up" data-aos-delay="400">
           <h2 className="section__title">Misi</h2>
           <ol>
             <li>

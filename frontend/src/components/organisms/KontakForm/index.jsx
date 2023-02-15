@@ -32,7 +32,7 @@ const KontakForm = () => {
   return (
     <div className="contact__form">
       <ToastContainer />
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} data-aos="fade-up">
         <div className="row">
           <div className="col-xxl-6 col-xl-6 col-md-6">
             <div className="contact__form-input">

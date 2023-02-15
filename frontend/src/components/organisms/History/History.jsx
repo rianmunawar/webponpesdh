@@ -5,9 +5,13 @@ import shapePink from "../../../assets/img/why/why-shape-pink.png";
 
 const History = () => {
   return (
-    <section className="why__area pt-100 mb-100">
+    <section className="why__area mb-100">
       <div className="container">
-        <div className="row align-items-center">
+        <div
+          className="row align-items-center"
+          data-aos="fade-up"
+          data-aos-delay="700"
+        >
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
             <div className="why__thumb">
               <iframe src="https://www.youtube-nocookie.com/embed/hM5tPRBp8YE" />
@@ -18,7 +22,7 @@ const History = () => {
           <div className="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">
             <div className="why__content pr-50 mt-40">
               <div className="section__title-wrapper mb-30">
-                <span className="section__sub-title">Sejarah singkat</span>
+                <span className="section__sub-title">Selayang Pandang</span>
                 <h2 className="section__title">
                   YPI
                   <span className="yellow-bg yellow-bg-big">

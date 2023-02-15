@@ -12,7 +12,11 @@ const BeritaPage = () => {
         <div className="berita__wrapper p-4 row">
           <div className="col-xxl-8 col-xl-8 col-lg-8">
             <div className="row grid">
-              <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="col-12 col-md-6 col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
                 <Card
                   title="Maulid Nabi Muhammad SAW"
                   linkTarget="/detail"
@@ -23,7 +27,11 @@ const BeritaPage = () => {
                   updatedAt="Juni, 12 2022"
                 />
               </div>
-              <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="col-12 col-md-6 col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <Card
                   title="Maulid Nabi Muhammad SAW"
                   linkTarget="/detail"
@@ -34,7 +42,11 @@ const BeritaPage = () => {
                   updatedAt="Juni, 12 2022"
                 />
               </div>
-              <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="col-12 col-md-6 col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <Card
                   title="Maulid Nabi Muhammad SAW"
                   linkTarget="/detail"

@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 const BannerPage = (props) => {
   return (
-    <div className="container-fluid mt-100 grey-bg" style={{ height: "220px" }}>
+    <div
+      className="container-fluid mt-100"
+      style={{ height: "40vh", backgroundColor: "#ebebeb" }}
+    >
       <div className="container top-50 position-relative translate-middle-y">
         <h2 className="page__title black-color ">{props.title}</h2>
         <nav aria-label="breadcrumb">

@@ -54,15 +54,11 @@ body {
 }
 
 .navbar .nav-link .active {
-  color: var(--bg-green) !important;
-}
-
-.navbar-nav .active {
-  color: var(--bg-green) !important;
+  color: var(--bg-primary) !important;
 }
 
 .navbar .nav-link:hover {
-  color: var(--bg-green) !important;
+  color: var(--bg-primary) !important;
 }
 
 .dropdown a {
@@ -71,9 +67,9 @@ body {
 }
 
 .dropdown a:hover {
-  color: var(--bg-green) !important;
+  color: var(--bg-primary) !important;
 }
 
 .dropdown a.show {
-  color: var(--bg-green) !important;
+  color: var(--bg-primary) !important;
 }

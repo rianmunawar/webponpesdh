@@ -45,6 +45,9 @@
 /*  01. Theme default CSS
 /*----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+:root {
+  --bg-primary: #009b4c;
+}
 * {
   margin: 0;
   padding: 0;
@@ -201,19 +204,19 @@ p {
 }
 
 *::-moz-selection {
-  background: #2b4eff;
+  background: var(--bg-primary);
   color: #ffffff;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: #2b4eff;
+  background: var(--bg-primary);
   color: #ffffff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #2b4eff;
+  background: var(--bg-primary);
   color: #ffffff;
   text-shadow: none;
 }
@@ -305,7 +308,7 @@ p {
 }
 
 .green-bg {
-  background: #0cae74;
+  background: var(--bg-primary);
 }
 
 .white-bg {
@@ -317,7 +320,7 @@ p {
 }
 
 .footer-bg {
-  background: #0e1133;
+  background: #0a2819;
 }
 
 /*--
@@ -341,7 +344,7 @@ p {
 }
 
 .theme-color {
-  color: #2b4eff !important;
+  color: var(--bg-primary) !important;
 }
 
 .black-color {
@@ -436,7 +439,7 @@ p {
   text-align: center;
   padding: 0 25px;
   color: #ffffff;
-  background: #0cae74;
+  background: #009b4c;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -676,7 +679,7 @@ p {
 .section__sub-title {
   font-size: 18px;
   font-weight: 500;
-  color: #0cae74;
+  color: var(--bg-primary);
   display: inline-block;
   margin-bottom: 5px;
 }
@@ -3866,7 +3869,7 @@ p.checkout-coupon input[type="submit"]:hover {
   border: medium none;
   color: #fff;
   display: inline-block;
-  float: left;
+  /* float: left; */
   font-size: 12px;
   font-weight: 700;
   height: 40px;
@@ -4213,7 +4216,7 @@ p.checkout-coupon input[type="text"]:focus {
 }
 
 .payment-method .btn-link {
-  -moz-user-select: none;
+  /* -moz-user-select: none; */
   background: no-repeat;
   border: medium none;
   border-radius: 0;
@@ -4526,7 +4529,6 @@ p.checkout-coupon input[type="text"]:focus {
 .why__thumb {
   position: relative;
   z-index: 1;
-  margin-left: -35px;
 }
 
 .why__thumb iframe {
@@ -4979,7 +4981,7 @@ p.checkout-coupon input[type="text"]:focus {
   }
 }
 .blog__title a:hover {
-  color: #2b4eff;
+  color: var(--bg-primary);
 }
 .blog__content {
   padding: 30px;
@@ -4993,7 +4995,7 @@ p.checkout-coupon input[type="text"]:focus {
   height: 20px;
   line-height: 20px;
   font-size: 14px;
-  color: #0fa0dd;
+  color: #009b4c;
   background: rgba(15, 160, 221, 0.1);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -7306,13 +7308,13 @@ p.checkout-coupon input[type="text"]:focus {
   color: #a1a2ab;
 }
 .footer__link ul li a:hover {
-  color: #ffffff;
+  color: var(--bg-primary);
 }
 .footer__link-2 ul li a {
   color: #53545b;
 }
 .footer__link-2 ul li a:hover {
-  color: #2b4eff;
+  color: var(--bg-primary);
 }
 .footer__subscribe-input {
   position: relative;
@@ -7338,7 +7340,7 @@ p.checkout-coupon input[type="text"]:focus {
   right: 0;
   font-size: 18px;
   color: #ffffff;
-  background: #2b4eff;
+  background: var(--bg-primary);
   width: 70px;
   height: 60px;
   padding-right: 25px;
@@ -7347,6 +7349,8 @@ p.checkout-coupon input[type="text"]:focus {
   -moz-transition: all ease 0.2s;
   -ms-transition: all ease 0.2s;
   -o-transition: all ease 0.2s;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   overflow: hidden;
 }
 .footer__subscribe-input button i {
@@ -7412,7 +7416,7 @@ p.checkout-coupon input[type="text"]:focus {
 }
 .footer__bottom {
   padding: 20px 0;
-  border-top: 1px solid #1c1f3f;
+  border-top: 1px solid #0a1500;
 }
 .footer__bottom-2 {
   border-color: #e0e1e8;
