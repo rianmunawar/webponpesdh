@@ -35,6 +35,8 @@ export default function WhyUs() {
               },
             }}
             className="mySwiper"
+            data-aos="fade-left"
+            data-aos-duration="800"
           >
             <SwiperSlide>
               <div className="row g-5 justify-content-center">

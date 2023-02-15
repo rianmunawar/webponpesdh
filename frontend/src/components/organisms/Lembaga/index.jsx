@@ -9,7 +9,11 @@ export const Lembaga = () => {
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6 col-sm-6 mb-4">
               <div className="lembaga-wrapper">
-                <div className="card pink-bg shadow">
+                <div
+                  className="card pink-bg shadow"
+                  data-aos="fade-up"
+                  data-aos-delay="0"
+                >
                   <div className="card-body">
                     <h3 className="card-title text-white">RA AR-ROHMAH</h3>
                     <p className="card-deskription text-white">
@@ -22,7 +26,11 @@ export const Lembaga = () => {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 mb-4">
               <div className="lembaga-wrapper">
-                <div className="card green-bg shadow">
+                <div
+                  className="card green-bg shadow"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
                   <div className="card-body">
                     <h3 className="card-title text-white">MTs Darul Hikmah</h3>
                     <p className="card-deskription text-white">
@@ -35,7 +43,11 @@ export const Lembaga = () => {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 mb-4">
               <div className="lembaga-wrapper">
-                <div className="card blue-bg shadow">
+                <div
+                  className="card blue-bg shadow"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
                   <div className="card-body">
                     <h3 className="card-title text-white">MAK Darul Hikmah</h3>
                     <p className="card-deskription text-white">
@@ -48,7 +60,11 @@ export const Lembaga = () => {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 mb-4">
               <div className="lembaga-wrapper">
-                <div className="card black-bg shadow">
+                <div
+                  className="card black-bg shadow"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
                   <div className="card-body">
                     <h3 className="card-title text-white">
                       Ponpes Darul Hikmah

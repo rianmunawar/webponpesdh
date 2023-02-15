@@ -14,7 +14,11 @@ export default function HeroPpdb() {
         <div className="container">
           <div className="row align-items-center hero-wrapper">
             <div className="col-xl-6 col-lg-6 col-md-12-col-sm-12 py-4">
-              <div className="hero-text">
+              <div
+                className="hero-text"
+                data-aos="fade-up"
+                data-aos-duration="800"
+              >
                 <h1 className="hero-title">
                   PPDB Online <br />
                   Ponpes Darul Hikmah Purwakarta
@@ -32,7 +36,11 @@ export default function HeroPpdb() {
                 />
               </div>
             </div>
-            <div className="col-xl-6 col-lg-6 col-md-12-col-sm-12 py-4">
+            <div
+              className="col-xl-6 col-lg-6 col-md-12-col-sm-12 py-4"
+              data-aos="fade-right"
+              data-aos-duration="800"
+            >
               <div className="hero-thumb d-flex">
                 <img src={heroImg} alt="hero" className="mx-auto" />
               </div>
