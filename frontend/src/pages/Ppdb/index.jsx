@@ -12,6 +12,7 @@ import { EffectFlip, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/navigation";
+import styles from "./ppdb.module.css";
 import KontakForm from "../../components/organisms/KontakForm";
 import CtaBtn from "../../components/atoms/CtaBtn/CtaBtn";
 
@@ -22,19 +23,24 @@ const Ppdb = () => {
         <HeroPpdb />
         <Lembaga />
         <WhyUs />
-        <section className="mb-100" id="informasi">
+        <section
+          className="mb-100"
+          id="informasi"
+          data-aos="fade-up"
+          data-aos-delay={100}
+        >
           <div className="container">
             <div className="informasi-wrapper py-5 mb-50">
               <div className="informasi-text-wrapper mb-5">
                 <h2 className="section__title">Informasi PPDB</h2>
-                <p>
+                <p style={{ fontSize: "1.3rem", lineHeight: "50px" }}>
                   Telah dibuka{" "}
                   <strong className="text-black">
                     PPDB Ponpes Darul Hikmah TA. 2023/2024
                   </strong>{" "}
                   semua jenjang
                 </p>
-                <div className="persyaratan">
+                <div className={styles.persyaratan}>
                   <h3>Pesyaratan PPDB</h3>
                   <ol>
                     <li className="text-black">

@@ -13,7 +13,7 @@ import "./whyus.css";
 export default function WhyUs() {
   return (
     <>
-      <section className="swiper__area p-4">
+      <section className="swiper__area p-4 mb-100">
         <div className="container">
           <div className="text-wrapper mb-5">
             <h1 className="section__title">
