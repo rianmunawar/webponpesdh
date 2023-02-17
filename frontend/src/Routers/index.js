@@ -14,7 +14,11 @@ function Routers() {
   return (
     <Routes>
       <Route path="/" element={<Beranda />} />
-      <Route path="/profil" element={<ProfilPage />} />
+      <Route
+        path="/profil"
+        element={<ProfilPage />}
+        preventScrollReset={true}
+      />
       <Route path="/blog" element={<BeritaPage />} />
       <Route path="/kontak" element={<KontakPage />} />
       <Route path="/mak" element={<Mak />} />

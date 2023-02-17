@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalContext";
 import Routers from "./Routers";
+import ToTop from "./utils/ToTop";
 
 function App() {
   useEffect(() => {
@@ -11,6 +12,7 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
+      <ToTop />
       <GlobalProvider>
         <Routers />
       </GlobalProvider>

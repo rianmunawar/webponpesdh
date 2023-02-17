@@ -6650,15 +6650,16 @@ p.checkout-coupon input[type="text"]:focus {
 /*----------------------------------------*/
 .error__area {
   height: 100vh;
+  overflow: hidden;
 }
 .error__title {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 0.9;
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .error__title {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 @media (max-width: 575px) {
@@ -6672,16 +6673,16 @@ p.checkout-coupon input[type="text"]:focus {
   margin-bottom: 45px;
 }
 .error__thumb img {
-  width: 255px;
+  width: 60%;
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 840px) {
   .error__thumb img {
     width: 100%;
   }
 }
 @media (max-width: 575px) {
   .error__thumb img {
-    width: 170px;
+    width: 100%;
   }
 }
 

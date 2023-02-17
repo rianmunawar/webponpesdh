@@ -24,9 +24,11 @@ export default function HeroPpdb() {
                   Ponpes Darul Hikmah Purwakarta
                 </h1>
                 <p className="herro-description">
-                  Mari bergabung bersama kami membuka jalan menuju masa depan
-                  yang cerah. Ayo daftar sekarang dan jadilah bagian dari
-                  lingkungan pendidikan terbaik.
+                  Bergabunglah dengan kami di Ponpes Darul Hikmah Purwakarta dan
+                  rasakan pengalaman belajar yang berbeda dan unik. Kami
+                  menawarkan lingkungan belajar yang kondusif, kurikulum yang
+                  holistik, dan pembinaan karakter yang berlandaskan nilai-nilai
+                  Islam. Mari bersama-sama meraih masa depan gemilang.
                 </p>
                 <CtaBtn
                   className="d-block mt-100"

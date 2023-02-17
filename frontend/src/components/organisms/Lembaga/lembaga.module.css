@@ -2,7 +2,8 @@
   height: 180px;
 } */
 .customize {
-  height: 450px;
+  min-height: 520px !important;
+  height: auto !important;
   padding: 10px;
 }
 

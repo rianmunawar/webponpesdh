@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 var cx = classNames.bind("./backToTop.css");
 import "./backToTop.css";
+import ToTop from "../../../utils/ToTop";
 
 const ToTopBtn = () => {
   const [yPos, setYPos] = useState(0);
