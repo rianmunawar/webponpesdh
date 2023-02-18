@@ -1,0 +1,89 @@
+.my-modal {
+  height: 100vh !important;
+  padding: 1rem !important;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+.modal-wrapper {
+  width: auto !important;
+  max-width: 80vw !important;
+  justify-content: center;
+}
+.content-wrapper {
+  background-color: transparent !important;
+  width: auto !important;
+}
+
+.modal-body {
+  padding: 0 !important;
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body img {
+  /* height: 80vh; */
+  width: 80vw;
+  max-height: 90vh;
+  object-fit: contain;
+  object-position: center;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 425px) {
+  .modal-body img {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.btn-control-prev,
+.btn-control-next,
+.btn-control-close {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-control-close {
+  top: 0;
+  right: -60px;
+}
+.btn-control-prev {
+  left: 0;
+}
+.btn-control-next {
+  right: 0;
+}
+@media (max-width: 425px) {
+  .btn-control-prev,
+  .btn-control-next,
+  .btn-control-close {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-control-prev {
+    left: 110px;
+  }
+  .btn-control-next {
+    right: 74px;
+  }
+}
+.btn-control-prev:hover,
+.btn-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--bg-green);
+}

@@ -1,13 +1,13 @@
 import React from "react";
 import CtaBtn from "../../atoms/CtaBtn/CtaBtn";
-import heroImg from "../../../assets/img/hero/hero-1.jpg";
+import heroImg from "../../../assets/img/potobrosur-1.png";
 import "./hero.css";
 
 export default function HeroPpdb() {
   return (
     <>
       <section
-        className="banner-ppd__area pt-4 pb-5 blue-bg-3 mb-100"
+        className="banner-ppd__area pt-4 blue-bg-3 mb-100"
         style={{ marginTop: 80 }}
         id="banner"
       >
@@ -31,7 +31,7 @@ export default function HeroPpdb() {
                   Islam. Mari bersama-sama meraih masa depan gemilang.
                 </p>
                 <CtaBtn
-                  className="d-block mt-100"
+                  className="d-block mt-25"
                   classChild="e-btn"
                   label="Daftar Sekarang"
                   link="/ppdb/formulir-pendaftaran"
@@ -39,7 +39,7 @@ export default function HeroPpdb() {
               </div>
             </div>
             <div
-              className="col-xl-6 col-lg-6 col-md-12-col-sm-12 py-4"
+              className="col-xl-6 col-lg-6 col-md-12-col-sm-12"
               data-aos="fade-right"
               data-aos-duration="800"
             >

@@ -27,7 +27,7 @@ export default function FormPendaftaran() {
       .post(`${endpoint}/pendaftaran`, { ...data })
       .then((res) => successMessage(res.data.message))
       .catch((err) => errorMessage(err.message));
-    // reset();
+    reset();
   };
 
   return (

@@ -39,7 +39,7 @@ export const Lembaga = () => {
                 <div
                   className={`card shadow ${styles["customize"]}`}
                   data-aos="fade-up"
-                  data-aos-delay="0"
+                  data-aos-delay="200"
                 >
                   <img
                     src={homeIcon}
@@ -62,7 +62,7 @@ export const Lembaga = () => {
                 <div
                   className={`card shadow ${styles["customize"]}`}
                   data-aos="fade-up"
-                  data-aos-delay="200"
+                  data-aos-delay="400"
                 >
                   <img
                     src={homeIcon}
