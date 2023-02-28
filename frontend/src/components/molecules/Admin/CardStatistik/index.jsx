@@ -9,7 +9,7 @@ function CardStatistik(props) {
           <h3 className="statistics-value">{props.value}</h3>
         </div>
         <button className="btn-statistics">
-          <img src={props.icon} alt={`${props.label} icon`} />
+          <img src={props.icon} alt={`${props.text} icon`} />
         </button>
       </div>
     </div>

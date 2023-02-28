@@ -1,4 +1,5 @@
 import React from "react";
+const PropTypes = require("prop-types");
 import "./program-card.css";
 
 function ProgramCard(props) {
@@ -9,9 +10,18 @@ function ProgramCard(props) {
       </div>
       <div className="program__content">
         <h4 className="program__title">{props.content}</h4>
+        {props.children}
       </div>
     </div>
   );
 }
+ProgramCard.defaultProps = {
+  children: null,
+};
+ProgramCard.propTypes = {
+  icon: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
 
 export default ProgramCard;

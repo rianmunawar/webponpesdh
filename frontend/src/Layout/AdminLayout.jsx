@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
+import { Outlet } from "react-router-dom";
 import SideBar from "../components/organisms/Admin/SideBar";
 import TopNav from "../components/organisms/Admin/TopNav";
 import { GlobalContext } from "../context/GlobalContext";
@@ -22,7 +23,9 @@ function AdminLayout(props) {
         <SideBar />
         <div className="col-12 col-lg-9 main-content">
           <TopNav />
-          <div className="content p-md-5">{props.children}</div>
+          <div className="content p-md-5">
+            <Outlet />
+          </div>
         </div>
         <div className="container">
           <footer className="py-5 w-100 ms-lg-5 px-3 px-md-0">

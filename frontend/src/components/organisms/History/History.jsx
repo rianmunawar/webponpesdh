@@ -1,7 +1,9 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import IconYellowList from "../../atoms/IconYellowList";
 import shapeGreen from "../../../assets/img/why/why-shape-green.png";
 import shapePink from "../../../assets/img/why/why-shape-pink.png";
+
+const Iframe = lazy(() => import("../../atoms/Iframe"));
 
 const History = () => {
   return (
@@ -14,7 +16,10 @@ const History = () => {
         >
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
             <div className="why__thumb">
-              <iframe src="https://www.youtube-nocookie.com/embed/hM5tPRBp8YE" />
+              <Suspense fallback={<div>Video Loading...</div>}>
+                <Iframe url="https://www.youtube-nocookie.com/embed/hM5tPRBp8YE" />
+                {/* https://www.youtube-nocookie.com/embed/hM5tPRBp8YE */}
+              </Suspense>
               <img className="why-green" src={shapeGreen} alt={"element"} />
               <img className="why-pink" src={shapePink} alt={"element"} />
             </div>

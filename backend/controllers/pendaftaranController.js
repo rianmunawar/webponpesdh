@@ -1,7 +1,7 @@
 const { Pendaftaran } = require("../models");
 const Validator = require("fastest-validator");
 const response = require("../response");
-const { where } = require("sequelize");
+// const { where } = require("sequelize");
 
 const v = new Validator();
 // Get all data pendaftaran
@@ -14,7 +14,7 @@ const getAllPendaftaran = async (req, res) => {
     });
     response(200, pendaftaran, "get all data successfuly", res);
   } catch (err) {
-    response(500, err.message, "internal server error", res);
+    response(404, {}, err.message, res);
   }
 };
 

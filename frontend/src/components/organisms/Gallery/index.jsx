@@ -5,6 +5,7 @@ import { Modal } from "react-bootstrap";
 import IconYellowList from "../../atoms/IconYellowList";
 // import styles
 import Styles from "./gallery.module.css";
+import LazyImage from "../../atoms/LazyImage";
 
 const Gallery = () => {
   const [show, setShow] = useState(false);
@@ -90,25 +91,27 @@ const Gallery = () => {
         </Modal>
 
         <div className="row gy-4 p-0">
-          <div className="gallery-wrapper">
-            <ResponsiveMasonry
-              columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-            >
-              <Masonry gutter="1rem">
-                {data.map((item, index) => (
-                  <img
-                    src={`${endpoint}/${item.image}`}
-                    key={index}
-                    alt="gambar"
-                    onClick={handleShow}
-                    className="image"
-                    data-aos="fade-up"
-                    data-aos-delay={index * 200}
-                  />
-                ))}
-              </Masonry>
-            </ResponsiveMasonry>
-          </div>
+          <ResponsiveMasonry
+            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+          >
+            <Masonry gutter="1rem">
+              {data.map((item, index) => (
+                <LazyImage
+                  key={index}
+                  src={`${endpoint}/${item.image}`}
+                  placeholderSrc={`${endpoint}/${item.image}`}
+                  effect="blur"
+                  alt="gambar"
+                  onClick={handleShow}
+                  className={Styles["gallery-item"]}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 200}
+                  width={"100%"}
+                  height={"auto"}
+                />
+              ))}
+            </Masonry>
+          </ResponsiveMasonry>
         </div>
       </div>
     </section>

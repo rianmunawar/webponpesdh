@@ -1,11 +1,15 @@
 import React from "react";
 import IconYellowList from "../../atoms/IconYellowList";
-import "./fasilitas.css";
+import LazyImage from "../../atoms/LazyImage";
+import Styles from "./fasilitas.module.css";
 
 export default function Fasilitas() {
   return (
     <>
-      <section className="fasilitas__area mb-100 p-5" id="fasilitas">
+      <section
+        className={`${Styles["fasilitas__area"]} mb-100 p-5`}
+        id="fasilitas"
+      >
         <div className="container">
           <div className="row">
             <div className="text-wrapper text-center">
@@ -23,58 +27,90 @@ export default function Fasilitas() {
           </div>
           <div className="row justify-content-center g-2">
             <div
-              className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+              className={`${Styles["fasilitas-item"]} col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12`}
               data-aos="zoom-in"
-              data-aos-delay="200"
+              data-aos-delay={300}
             >
-              <div className="image-gallery">
-                <img src="https://unsplash.it/1200/768.jpg?image=271" alt="" />
+              <div className={Styles["image-gallery"]}>
+                <LazyImage
+                  src="https://unsplash.it/1200/768.jpg?image=271"
+                  alt="fasilitas"
+                  width="100%"
+                  height="250px"
+                  wrrapperClassName={Styles["image-item"]}
+                />
               </div>
-              <div className="fasilitas-item-text">
-                <div className="fasilitas-item-title green-bg text-center">
+              <div className={Styles["fasilitas-item-text"]}>
+                <div
+                  className={`${Styles["fasilitas-item-title"]} green-bg text-center`}
+                >
                   <h4 className="text-white mt-3">Masjid Raudhatul Jannah</h4>
                 </div>
               </div>
             </div>
             <div
-              className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+              className={`${Styles["fasilitas-item"]} col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12`}
               data-aos="zoom-in"
-              data-aos-delay="300"
+              data-aos-delay={500}
             >
-              <div className="image-gallery">
-                <img src="https://unsplash.it/1200/768.jpg?image=271" alt="" />
+              <div className={Styles["image-gallery"]}>
+                <LazyImage
+                  src="https://unsplash.it/1200/768.jpg?image=271"
+                  alt="fasilitas"
+                  width="100%"
+                  height="250px"
+                  wrrapperClassName={Styles["image-item"]}
+                />
               </div>
-              <div className="fasilitas-item-text">
-                <div className="fasilitas-item-title green-bg text-center">
-                  <h4 className="text-white mt-3">Lapangan Olahraga</h4>
+              <div className={Styles["fasilitas-item-text"]}>
+                <div
+                  className={`${Styles["fasilitas-item-title"]} green-bg text-center`}
+                >
+                  <h4 className="text-white mt-3">Masjid Raudhatul Jannah</h4>
                 </div>
               </div>
             </div>
             <div
-              className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+              className={`${Styles["fasilitas-item"]} col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12`}
               data-aos="zoom-in"
-              data-aos-delay="400"
+              data-aos-delay={700}
             >
-              <div className="image-gallery">
-                <img src="https://unsplash.it/1200/768.jpg?image=271" alt="" />
+              <div className={Styles["image-gallery"]}>
+                <LazyImage
+                  src="https://unsplash.it/1200/768.jpg?image=271"
+                  alt="fasilitas"
+                  width="100%"
+                  height="250px"
+                  wrrapperClassName={Styles["image-item"]}
+                />
               </div>
-              <div className="fasilitas-item-text">
-                <div className="fasilitas-item-title green-bg text-center">
-                  <h4 className="text-white mt-3">Ruang Kelas Nyaman</h4>
+              <div className={Styles["fasilitas-item-text"]}>
+                <div
+                  className={`${Styles["fasilitas-item-title"]} green-bg text-center`}
+                >
+                  <h4 className="text-white mt-3">Masjid Raudhatul Jannah</h4>
                 </div>
               </div>
             </div>
             <div
-              className="fasilitas-item col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+              className={`${Styles["fasilitas-item"]} col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12`}
               data-aos="zoom-in"
-              data-aos-delay="500"
+              data-aos-delay={900}
             >
-              <div className="image-gallery">
-                <img src="https://unsplash.it/1200/768.jpg?image=271" alt="" />
+              <div className={Styles["image-gallery"]}>
+                <LazyImage
+                  src="https://unsplash.it/1200/768.jpg?image=271"
+                  alt="fasilitas"
+                  width="100%"
+                  height="250px"
+                  wrrapperClassName={Styles["image-item"]}
+                />
               </div>
-              <div className="fasilitas-item-text">
-                <div className="fasilitas-item-title green-bg text-center">
-                  <h4 className="text-white mt-3">Kantin</h4>
+              <div className={Styles["fasilitas-item-text"]}>
+                <div
+                  className={`${Styles["fasilitas-item-title"]} green-bg text-center`}
+                >
+                  <h4 className="text-white mt-3">Masjid Raudhatul Jannah</h4>
                 </div>
               </div>
             </div>

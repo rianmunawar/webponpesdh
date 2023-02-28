@@ -4,24 +4,17 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
-.image-gallery img {
-  width: 100%;
-  transition: transform 0.5s ease-in-out;
-}
 .fasilitas-item {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
-.fasilitas-item:hover img {
+.fasilitas-item:hover .image-gallery span img {
   filter: brightness(50%);
   transform: scale(1.4);
 }
-
 .fasilitas-item-text {
   position: relative;
 }
-
 .fasilitas-item-title {
   position: absolute;
   width: 100%;
@@ -32,8 +25,15 @@
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
 }
-
 .fasilitas-item:hover .fasilitas-item-title {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
+}
+.image-gallery {
+  width: 100%;
+  overflow: hidden;
+}
+.image-gallery span img {
+  object-fit: cover;
+  transition: all 0.5s ease !important;
 }

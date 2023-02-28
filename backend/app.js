@@ -11,6 +11,7 @@ const usersRouter = require("./routes/users");
 const emailRouter = require("./routes/email");
 const pendaftaranRouter = require("./routes/pendaftaran");
 const galeriRouter = require("./routes/galeri");
+const settingRouter = require("./routes/setting");
 
 // app config middleware
 const app = express();
@@ -27,5 +28,6 @@ app.use("/user", usersRouter);
 app.use("/send-email", emailRouter);
 app.use("/pendaftaran", pendaftaranRouter);
 app.use("/galeri", galeriRouter);
+app.use("/setting", settingRouter);
 
 module.exports = app;

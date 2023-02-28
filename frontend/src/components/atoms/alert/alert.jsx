@@ -6,7 +6,7 @@ function successMessage(message) {
   return toast.success(message);
 }
 function errorMessage(message) {
-  return toast.success(message);
+  return toast.error(message);
 }
 
 export { successMessage, errorMessage };

@@ -8,6 +8,7 @@ import { HashLink } from "react-router-hash-link";
 import CtaBtn from "../../atoms/CtaBtn/CtaBtn";
 import logo from "../../../assets/img/logo/logo-pp.png";
 import "./header.css";
+import LazyImage from "../../atoms/LazyImage";
 
 function Header() {
   const activeLink = "active";
@@ -31,15 +32,9 @@ function Header() {
               as={"div"}
               className={urlPath[1] === "ppdb" && "w-50"}
             >
-              {urlPath[1] !== "ppdb" ? (
-                <Link to={"/"}>
-                  <img src={logo} alt="logo ponpes darul hikmah" />
-                </Link>
-              ) : (
-                <Link to={"/ppdb"}>
-                  <img src={logo} alt="logo ponpes darul hikmah" />
-                </Link>
-              )}
+              <Link to={urlPath[1] === "ppdb" ? "/ppdb" : "/"}>
+                <LazyImage src={logo} alt={"Logo ponpes darul hikmah"} />
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -49,15 +44,9 @@ function Header() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  {urlPath[1] !== "ppdb" ? (
-                    <Link to={"/"}>
-                      <h1>Darul Hikmah</h1>
-                    </Link>
-                  ) : (
-                    <Link to={"/ppdb"}>
-                      <h1>Darul Hikmah</h1>
-                    </Link>
-                  )}
+                  <Link to={urlPath[1] === "ppdb" ? "/ppdb" : "/"}>
+                    <h1>Darul Hikmah</h1>
+                  </Link>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

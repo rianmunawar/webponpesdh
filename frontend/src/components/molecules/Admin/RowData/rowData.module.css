@@ -1,0 +1,21 @@
+.item-wrapper:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom: 1px solid #eaeaea;
+}
+.item-wrapper:nth-child(even) {
+  background: #fcfcfc;
+}
+.item-wrapper {
+  background-color: #eaeaea;
+}
+.item-wrapper div p {
+  margin-bottom: 0 !important;
+  color: #0e1133;
+}
+.item-wrapper div p.text-label {
+  font-weight: 600;
+}
+.item-wrapper div p.text-content {
+  font-weight: 500;
+}

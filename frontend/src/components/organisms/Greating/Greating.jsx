@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import IconYellowList from "../../atoms/IconYellowList";
 import shapeGreen from "../../../assets/img/why/why-shape-green.png";
 import shapePink from "../../../assets/img/why/why-shape-pink.png";
-import shapeDot from "../../../assets/img/why/why-shape-dot.png";
-import shapeLine from "../../../assets/img/why/why-shape-line.png";
 import img from "../../../assets/img/bapak.png";
 import Styles from "./Greating.module.css";
+import LazyImage from "../../atoms/LazyImage";
 
 const Greating = () => {
   return (
@@ -57,34 +56,35 @@ const Greating = () => {
             </div>
           </div>
           <div
-            className="col-xxl-5 col-xl-5 col-lg-6 col-md-8"
+            className="col-xxl-5 col-xl-5 col-lg-6 col-md-8 justify-content-center"
             data-aos="zoom-in"
           >
             <div className={Styles["greating-thumb"]}>
-              <img
+              <LazyImage
                 src={img}
                 alt={`ketua yayasan`}
                 className={Styles["main-thumb"]}
+                forwadref={Styles["main-thumb"]}
+                width={"90%"}
+                height={"auto"}
+                wrapperClassName={Styles["greating-thumb-main"]}
               />
-              <img
+              <LazyImage
                 className={Styles["greating-green"]}
+                wrapperClassName={Styles["greating-thumb-green"]}
+                forwadref={Styles["greating-green"]}
                 src={shapeGreen}
                 alt={"element"}
+                width={500}
+                height={250}
               />
-              <img
+              <LazyImage
                 className={Styles["greating-pink"]}
+                wrapperClassName={Styles["greating-thumb-pink"]}
                 src={shapePink}
                 alt={"element"}
-              />
-              <img
-                className={Styles["greating-dot"]}
-                src={shapeDot}
-                alt={"element"}
-              />
-              <img
-                className={Styles["greating-line"]}
-                src={shapeLine}
-                alt={"element"}
+                width={"80%"}
+                height={"auto"}
               />
             </div>
           </div>

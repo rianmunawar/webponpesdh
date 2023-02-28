@@ -16,8 +16,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./slider.css";
-import imgSlider from "../../../assets/img/slider/slider-1.jpg";
+// import imgSlider from "../../../assets/img/slider/slider-1.jpg";
 import banner1 from "../../../assets/img/banner-1.png";
+import LazyImage from "../../atoms/LazyImage";
 
 const Slider = () => {
   return (
@@ -46,7 +47,7 @@ const Slider = () => {
         slidesPerView={1}
       >
         <SwiperSlide>
-          <img src={banner1} alt="image" className="w-100" />
+          <LazyImage src={banner1} alt="image" width={"100%"} height={"100%"} />
         </SwiperSlide>
         {/* <SwiperSlide>
           <img src={imgSlider} alt="image" className="w-100" />
