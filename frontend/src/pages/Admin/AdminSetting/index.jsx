@@ -25,25 +25,15 @@ function AdminSetting() {
         "Jl. Raya Sadan-Subang Km 12, Kp. Cikopo RT/RW 04/01, Ds. Karyamekar Kec. Cibatu Kab. Puwkarta Jawa Barata 41183",
     },
     {
-      label: "Visi",
-      content:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto nemo in optio minima quibusdam cupiditate ullam voluptatibus omnis, amet iure.",
-    },
-    {
-      label: "Misi",
-      content:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae repellat reprehenderit itaque iusto tempore, quaerat laborum culpa veritatis quo quas?",
-    },
-    {
-      label: "Motto",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae sint eligendi eos consectetur animi amet a modi quidem! Veritatis, itaque.",
-    },
-    {
       label: "Sejarah",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus quod ullam aperiam natus vitae illo dolorum. Dolor vel quisquam nulla eaque aspernatur. Blanditiis labore numquam inventore reprehenderit qui corrupti placeat nam incidunt sunt officia. Dicta corrupti soluta omnis voluptates numquam corporis voluptate. A, numquam eaque corrupti eligendi voluptates similique?",
     },
+  ];
+  const misi = [
+    "Menciptakan pendidikan islam yang berbasis islamic behaviour",
+    "Menanamkan pembiasaan nilai-nilai",
+    "Mencerminkan lingkungan pesantren yang estetis higenis dan harmonis",
   ];
 
   return (
@@ -66,6 +56,33 @@ function AdminSetting() {
                     key={index}
                   />
                 ))}
+                <RowData
+                  label={"Visi"}
+                  content={
+                    "Lembaga pendidikan islam uang dipilih, disenangi, dan dibutuhkan masyarakat serta mengangkat harkat drajat manusia dengan ilmu dan amalnya."
+                  }
+                />
+                <RowData label={"Misi"}>
+                  <ol>
+                    {misi.map((item, index) => (
+                      <li key={index}>
+                        <p className="text-content">{item}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </RowData>
+                <RowData
+                  label={"Visi"}
+                  content={
+                    "Lembaga pendidikan islam uang dipilih, disenangi, dan dibutuhkan masyarakat serta mengangkat harkat drajat manusia dengan ilmu dan amalnya."
+                  }
+                />
+                <RowData
+                  label={"Moto"}
+                  content={
+                    "Berakhlakul karimah, berbadan sehat, berwawasan luas, dan berfikir islami."
+                  }
+                />
               </Suspense>
             </div>
             <div className="btn-wrapper mb-3">

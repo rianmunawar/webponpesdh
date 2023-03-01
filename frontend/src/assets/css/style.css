@@ -7438,3 +7438,21 @@ p.checkout-coupon input[type="text"]:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* My Global Style */
+
+.swiper-scrollbar-drag {
+  background: var(--bg-primary);
+  position: relative;
+}
+.swiper-scrollbar-drag:before {
+  content: "";
+  background: var(--bg-primary);
+  position: relative;
+  left: -99vw;
+  top: 0;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 999;
+}

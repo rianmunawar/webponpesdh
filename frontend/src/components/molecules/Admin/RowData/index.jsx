@@ -9,7 +9,11 @@ function RowData({ label, content, ...props }) {
         <p className={`w-100 ${Styles["text-label"]}`}>{label}</p>
       </div>
       <div className="col-12 col-md-8 py-2">
-        <p className="text-content w-100">{content}</p>
+        {label === "Misi" ? (
+          props.children
+        ) : (
+          <p className="text-content w-100">{content}</p>
+        )}
       </div>
     </div>
   );
@@ -17,7 +21,7 @@ function RowData({ label, content, ...props }) {
 
 RowData.propTypes = {
   label: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.node,
 };
 
 export default RowData;
