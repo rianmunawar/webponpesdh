@@ -1,26 +1,28 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Setting extends Model {
+  class Identitas extends Model {
     static associate(models) {}
   }
-  Setting.init(
+  Identitas.init(
     {
       uuid: {
         type: DataTypes.STRING,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
       },
-      visi: DataTypes.STRING,
-      misi: DataTypes.STRING,
+      nama: DataTypes.STRING,
+      ketua_yayasan: DataTypes.STRING,
       tahun_berdiri: DataTypes.INTEGER,
+      alamat: DataTypes.TEXT,
+      sejarah: DataTypes.TEXT,
       jumlah_pegawai: DataTypes.INTEGER,
     },
     {
       sequelize,
-      modelName: "Setting",
+      modelName: "Identitas",
       freezeTableName: true,
     }
   );
-  return Setting;
+  return Identitas;
 };

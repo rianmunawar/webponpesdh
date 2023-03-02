@@ -1,0 +1,31 @@
+# user-service
+###
+POST http://localhost:5000/user/register
+
+{
+  "name": "Rian Munawar",
+  "email": "rawr@gmail.com",
+  "password": "rian1234"
+}
+
+###
+POST http://localhost:5000/user/login
+Content-Type: application/json
+
+{
+ "email": "rianwar@gmail.com",
+ "password": "rian1234"
+}
+
+###
+POST http://localhost:5000/user/logout
+
+### 
+GET http://localhost:5000/user
+
+
+###
+GET http://localhost:5000/user/1
+
+###
+GET http://localhost:5000/user/token

@@ -29,6 +29,9 @@ module.exports = {
           type: Sequelize.STRING,
           defaultValue: "user",
         },
+        refresh_token: {
+          type: Sequelize.TEXT,
+        },
         createdAt: {
           type: "TIMESTAMP",
           defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),

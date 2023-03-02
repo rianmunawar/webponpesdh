@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable(
-      "Setting",
+      "Identitas",
       {
         id: {
           allowNull: false,
@@ -16,14 +16,20 @@ module.exports = {
           defaultValue: Sequelize.UUIDV4,
           allowNull: false,
         },
-        visi: {
+        nama: {
           type: Sequelize.STRING,
         },
-        misi: {
+        ketua_yayasan: {
           type: Sequelize.STRING,
         },
         tahun_berdiri: {
           type: Sequelize.INTEGER,
+        },
+        alamat: {
+          type: Sequelize.TEXT,
+        },
+        sejarah: {
+          type: Sequelize.TEXT,
         },
         jumlah_pegawai: {
           type: Sequelize.INTEGER,
@@ -47,6 +53,6 @@ module.exports = {
     );
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Setting");
+    await queryInterface.dropTable("Identitas");
   },
 };

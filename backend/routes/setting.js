@@ -1,18 +1,18 @@
 const express = require("express");
-const settingController = require("../controllers/settingController");
+const identitasController = require("../controllers/identitasController");
 const router = express.Router();
 const {
-  getAllSetting,
-  getSettingById,
-  createDataSetting,
-  updateDataSetting,
-  deleteDataSetting,
-} = settingController;
+  getAllIdentitas,
+  getIdentitasById,
+  createDataIdentitas,
+  updateDataIdentitas,
+  deleteDataIdentitas,
+} = identitasController;
 
-router.get("/", getAllSetting);
-router.get("/:id", getSettingById);
-router.post("/", createDataSetting);
-router.patch("/:id", updateDataSetting);
-router.delete("/:id", deleteDataSetting);
+router.get("/", getAllIdentitas);
+router.get("/:id", getIdentitasById);
+router.post("/", createDataIdentitas);
+router.patch("/:id", updateDataIdentitas);
+router.delete("/:id", deleteDataIdentitas);
 
 module.exports = router;
