@@ -15,6 +15,7 @@ import Ppdb from "../pages/Ppdb";
 import ProfilPage from "../pages/ProfilPage";
 import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
+import Success from "../pages/Pendaftaran/success";
 
 function Routers() {
   const RouteGuard = ({ redirectUrl = "/user/login", children }) => {
@@ -30,6 +31,7 @@ function Routers() {
       <Route path="mak" element={<Mak />} />
       <Route path="ppdb" element={<Ppdb />} />
       <Route path="ppdb/formulir-pendaftaran" element={<Pendaftaran />} />
+      <Route path="ppdb/pendaftaran-selesai" element={<Success />} />
       <Route element={<RouteGuard />}>
         <Route path="/" element={<AdminLayout />}>
           <Route path="admin" element={<Admin />} />

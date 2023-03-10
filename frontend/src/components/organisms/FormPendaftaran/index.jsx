@@ -7,8 +7,10 @@ import axios from "axios";
 import { errorMessage, successMessage } from "../../atoms/alert/alert";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 export default function FormPendaftaran() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -28,6 +30,7 @@ export default function FormPendaftaran() {
       .then((res) => {
         successMessage(res.data.message);
         reset();
+        navigate("/ppdb/pendaftaran-selesai");
       })
       .catch((err) => errorMessage(err.message));
   };
