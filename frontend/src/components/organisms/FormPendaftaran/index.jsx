@@ -25,9 +25,11 @@ export default function FormPendaftaran() {
   const onSubmit = async (data) => {
     await axios
       .post(`${endpoint}/pendaftaran`, { ...data })
-      .then((res) => successMessage(res.data.message))
+      .then((res) => {
+        successMessage(res.data.message);
+        reset();
+      })
       .catch((err) => errorMessage(err.message));
-    reset();
   };
 
   return (
@@ -84,10 +86,6 @@ export default function FormPendaftaran() {
                     pattern: {
                       value: /^\d+$/,
                       message: "Hanya number saja",
-                    },
-                    minLength: {
-                      value: 5,
-                      message: "Minimal 5 karakter",
                     },
                   })}
                   onKeyUp={() => triger("nisn")}

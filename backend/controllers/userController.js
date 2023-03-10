@@ -7,7 +7,7 @@ const response = require("../response");
 const v = new Validator();
 
 const register = async (req, res) => {
-  const { name, email, password, role } = req.body;
+  const { name, email, password } = req.body;
   const salt = process.env.SALT_ROUND;
   const schema = {
     name: "string|required",
@@ -23,7 +23,6 @@ const register = async (req, res) => {
       name: name,
       email: email,
       password: hash,
-      role: role,
     })
       .then((users) => {
         const user = {
@@ -31,10 +30,10 @@ const register = async (req, res) => {
           name: users.name,
           email: users.email,
         };
-        response(200, user, "Create new user succesfully", res);
+        response(200, user, "Register succesfully", res);
       })
       .catch((err) => {
-        response(400, "no data created", err.message, res);
+        response(500, "no data created", err.message, res);
       });
   });
 };
@@ -69,8 +68,9 @@ const login = async (req, res) => {
         email: req.body.email,
       },
     });
-    const match = bcrypt.compare(req.body.password, user.password);
-    if (!match) response(403, {}, "password salah | forbiden access", res);
+    if (!user) response(404, {}, "user dengan email ini tidak ada", res);
+    const match = await bcrypt.compare(req.body.password, user.password);
+    if (!match) response(404, {}, "password salah", res);
     const loginUser = {
       userId: user.uuid,
       name: user.name,
@@ -91,7 +91,7 @@ const login = async (req, res) => {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000,
     });
-    response(200, accessToken, "Login Success", res);
+    response(200, { token: accessToken }, "Login Success", res);
   } catch (err) {
     response(401, {}, err.message, res);
   }
@@ -115,7 +115,7 @@ const refreshToken = async (req, res) => {
   console.log(req.cookies);
   try {
     const refreshToken = req.cookies.refresh_token;
-    if (!refreshToken) response(400, {}, "Bad request", res);
+    if (!refreshToken) response(403, {}, "Forbiden access", res);
     const user = await User.findOne({
       where: { refresh_token: refreshToken },
     });
@@ -132,7 +132,7 @@ const refreshToken = async (req, res) => {
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: "15s" }
       );
-      response(200, accessToken, "Refresh token success", res);
+      response(200, { token: accessToken }, "Refresh token success", res);
     });
   } catch (err) {
     response(401, {}, err.message, res);

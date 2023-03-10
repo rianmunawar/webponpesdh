@@ -13,8 +13,8 @@ POST http://localhost:5000/user/login
 Content-Type: application/json
 
 {
- "email": "rianwar@gmail.com",
- "password": "rian1234"
+ "email": "test@gmail.com",
+ "password": "test12345"
 }
 
 ###

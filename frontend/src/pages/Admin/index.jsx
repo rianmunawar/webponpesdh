@@ -6,6 +6,7 @@ import homeIcon from "../../assets/svg/home-colored.svg";
 import "./admin.css";
 import CardStatistik from "../../components/molecules/Admin/CardStatistik";
 import CardList from "../../components/molecules/CardList";
+import refreshToken from "../../utils/refreshToken";
 
 function Admin() {
   const [data, setData] = useState([]);
@@ -18,6 +19,7 @@ function Admin() {
       // Save the data in the state
       setData(payload);
     });
+    refreshToken();
   }, []);
   return (
     <>
@@ -118,8 +120,8 @@ function Admin() {
         <div className="col-12 col-lg-6">
           <h3>Fresh News</h3>
           <div className="document-card">
-            {[1, 2, 3].map((item) => (
-              <CardList />
+            {[1, 2, 3].map((item, index) => (
+              <CardList key={index} />
             ))}
           </div>
         </div>
