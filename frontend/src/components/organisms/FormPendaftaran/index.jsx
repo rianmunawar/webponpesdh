@@ -2,12 +2,12 @@ import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { useForm } from "react-hook-form";
 import FormInput from "../../atoms/FormInput";
-import "./form.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { errorMessage, successMessage } from "../../atoms/alert/alert";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+import "./form.css";
 
 export default function FormPendaftaran() {
   const navigate = useNavigate();
@@ -15,12 +15,13 @@ export default function FormPendaftaran() {
     register,
     handleSubmit,
     reset,
-    triger,
+    trigger,
     watch,
     formState: { errors },
   } = useForm();
 
   const jenjang = watch("jenjang");
+  const j_pendaftaran = watch("j_pendaftaran");
 
   const endpoint = process.env.REACT_APP_ENDPOINT;
 
@@ -48,7 +49,72 @@ export default function FormPendaftaran() {
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="p-0 p-md-5">
             <fieldset className="rounded shadow">
-              <legend className="text-black fw-bold mb-4">Data Diri</legend>
+              <legend className="text-black fw-bold mb-4">Data Pribadi</legend>
+              <div className="mb-3">
+                <label className="text-black form-label">
+                  Jenis Pendapataran
+                  <span className="text-danger">*</span>
+                </label>
+                <div className="form-check">
+                  <label className="form-check-label" htmlFor="baru">
+                    Siswa Baru
+                  </label>
+                  <input
+                    type="radio"
+                    name="j_pendaftaran"
+                    id="baru"
+                    value={"baru"}
+                    className={`form-check-input ${
+                      errors.j_pendaftaran && "is-invalid"
+                    }`}
+                    {...register("j_pendaftaran", {
+                      required: "Pilih Jenis Pendaftaran",
+                    })}
+                  />
+                </div>
+                <div className="form-check">
+                  <label className="form-check-label" htmlFor="pindahan">
+                    Siswa Pindahan
+                  </label>
+                  <input
+                    type="radio"
+                    className={`form-check-input ${
+                      errors.j_pendaftaran && "is-invalid"
+                    }`}
+                    name="j_pendaftaran"
+                    id="pindahan"
+                    value={"pindahan"}
+                    {...register("j_pendaftaran", {
+                      required: "Pilih Jenis Pendaftaran",
+                    })}
+                  />
+                </div>
+                {errors.j_pendaftaran?.type === "required" && (
+                  <small className="text-danger">
+                    {" "}
+                    {errors.j_pendaftaran.message}
+                  </small>
+                )}
+              </div>
+              {j_pendaftaran === "pindahan" && (
+                <FormInput
+                  label="Kelas"
+                  name="kelas"
+                  type="text"
+                  isRequired
+                  mb="3"
+                  className={`form-control ${errors.kelas && "is-invalid"}`}
+                  {...register("kelas", { required: "kelas Wajib Di isi" })}
+                  error={
+                    errors.kelas?.type === "required" && (
+                      <small className="text-danger">
+                        {" "}
+                        {errors.kelas.message}
+                      </small>
+                    )
+                  }
+                />
+              )}
               <div className="mb-3">
                 <label htmlFor="jenjang" className="form-label text-black">
                   Jenjang Pendaftaran
@@ -91,7 +157,7 @@ export default function FormPendaftaran() {
                       message: "Hanya number saja",
                     },
                   })}
-                  onKeyUp={() => triger("nisn")}
+                  onKeyUp={() => trigger("nisn")}
                   error={
                     errors.nisn && (
                       <small className="text-danger">

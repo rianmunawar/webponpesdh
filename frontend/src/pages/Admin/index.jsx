@@ -7,19 +7,17 @@ import "./admin.css";
 import CardStatistik from "../../components/molecules/Admin/CardStatistik";
 import CardList from "../../components/molecules/CardList";
 import refreshToken from "../../utils/refreshToken";
+import Cookies from "js-cookie";
 
 function Admin() {
   const [data, setData] = useState([]);
   const endpoint = process.env.REACT_APP_ENDPOINT;
   useEffect(() => {
     axios.get(`${endpoint}/pendaftaran`).then((res) => {
-      // Get the data from the response
       const { payload } = res.data;
-
-      // Save the data in the state
       setData(payload);
     });
-    refreshToken();
+    if (!Cookies.get("token")) refreshToken();
   }, []);
   return (
     <>
@@ -29,7 +27,7 @@ function Admin() {
           <h5 className="content-desc mb-4">statistik keadaan lembaga</h5>
         </div>
         <div className="col-12 col-md-6 col-xl-4">
-          <CardStatistik text="Jumlah Siswa" value="1,000" icon={timeIcon} />
+          <CardStatistik text="Jumlah Siswa" value="633" icon={timeIcon} />
         </div>
         <div className="col-12 col-md-6 col-xl-4">
           <CardStatistik

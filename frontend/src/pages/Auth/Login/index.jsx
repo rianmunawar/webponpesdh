@@ -22,8 +22,8 @@ function Login() {
       .post(`${endpoint}/user/login`, { ...data })
       .then((res) => {
         const { token } = res.data.payload;
-        const expInFifteenSeconds = new Date(new Date().getTime() + 15 * 1000);
-        Cookies.set("token", token, { expires: expInFifteenSeconds });
+        // const expInFifteenSeconds = new Date(new Date().getTime() + 15 * 1000);
+        Cookies.set("token", token, { expires: 1 });
         navigate("/admin");
         reset();
       })

@@ -112,7 +112,6 @@ const logout = async (req, res) => {
   }
 };
 const refreshToken = async (req, res) => {
-  console.log(req.cookies);
   try {
     const refreshToken = req.cookies.refresh_token;
     if (!refreshToken) response(403, {}, "Forbiden access", res);

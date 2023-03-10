@@ -19,6 +19,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       nama: DataTypes.STRING,
+      j_pendaftaran: DataTypes.STRING,
+      kelas: DataTypes.STRING,
       jenjang: DataTypes.STRING,
       nisn: DataTypes.NUMBER,
       nik: DataTypes.NUMBER,

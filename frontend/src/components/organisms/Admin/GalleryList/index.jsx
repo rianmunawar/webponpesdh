@@ -12,7 +12,6 @@ function GalleryList() {
     }
     getGallery();
   }, []);
-  console.log(gallery);
   return (
     <section className="gallery-list mt-5">
       <div className="container">

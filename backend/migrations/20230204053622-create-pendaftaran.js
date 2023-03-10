@@ -19,6 +19,12 @@ module.exports = {
         nama: {
           type: Sequelize.STRING,
         },
+        j_pendaftaran: {
+          type: Sequelize.STRING,
+        },
+        kelas: {
+          type: Sequelize.STRING,
+        },
         jenjang: {
           type: Sequelize.STRING,
         },

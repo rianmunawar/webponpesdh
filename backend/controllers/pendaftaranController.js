@@ -40,6 +40,8 @@ const createDataPendaftaran = async (req, res) => {
   try {
     const schema = {
       nama: "string",
+      j_pendaftaran: "string",
+      kelas: "string",
       jenjang: "string",
       nisn: "number|integer|positive",
       nik: "number|integer|positive",
@@ -75,6 +77,8 @@ const createDataPendaftaran = async (req, res) => {
         const responseData = ({
           uuid,
           nama,
+          j_pendaftaran,
+          kelas,
           jenjang,
           nisn,
           nik,
